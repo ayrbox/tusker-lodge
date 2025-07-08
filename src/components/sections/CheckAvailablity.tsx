@@ -8,11 +8,11 @@ export default function CheckAvailablity() {
           <form className="flex gap-3">
             <input
               type="date"
-              className="border rounded rounderd-sm border-gray-400 px-4 py-1"
+              className="border rounded rounderd-sm border-gray-400 px-4"
             />
             <input
               type="date"
-              className="border rounded rounderd-sm border-gray-400 px-4 py-1"
+              className="border rounded rounderd-sm border-gray-400 px-4"
             />
             <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
               Check Availability
