@@ -2,9 +2,13 @@ import ButtonLink from "@/components/ButtonLink";
 import HeroImage from "@/images/hero-room-image.jpg";
 
 export default function Hero() {
+  //console.dir(HeroImage, { depth: Infinity });
   return (
     <section
-      className={`relative bg-cover bg-no-repeat bg-center bg-[url(${HeroImage})]`}
+      className="relative bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: `url(${HeroImage.src})`,
+      }}
     >
       <div className="container mx-auto py-64 flex flex-col">
         <h1 className="relative text-7xl font-bold text-gray-200 text-shadow-lg">
