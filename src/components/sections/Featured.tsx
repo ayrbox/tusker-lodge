@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HarbourImage from "@/images/featured-torquay-harbour.jpg";
 
 export default function Featured() {
   return (
@@ -24,7 +25,7 @@ export default function Featured() {
         </div>
         <Image
           className="rounded rounded-lg shadow-md border w-1/2"
-          src={`${process.env.PAGES_BASE_PATH || ""}/featured-torquay-harbour.jpg`}
+          src={HarbourImage}
           alt="Torquay Harbour"
           height={500}
           width={500}
