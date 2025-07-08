@@ -1,11 +1,11 @@
-import Image from "next/image";
+import CheckAvailablity from "@/components/sections/CheckAvailablity";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <div className="p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>Main Content</h1>
-      </main>
-    </div>
+    <main className="font-[family-name:var(--font-geist-sans)]">
+      <Hero />
+      <CheckAvailablity />
+    </main>
   );
 }
