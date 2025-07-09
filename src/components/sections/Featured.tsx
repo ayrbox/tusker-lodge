@@ -4,9 +4,21 @@ import HarbourImage from "@/images/featured-torquay-harbour.jpg";
 export default function Featured() {
   return (
     <section>
-      <div className="container mx-auto py-16 flex">
-        <div className="w-1/2 text-gray-500">
-          <h1 className="mb-6 text-5xl font-bold">About Us</h1>
+      <div className="container mx-auto py-8 flex flex-col items-center md:flex-row gap-4">
+        <Image
+          className="rounded rounded-lg shadow-md border md:w-1/2"
+          src={HarbourImage}
+          alt="Torquay Harbour"
+          height={500}
+          width={500}
+        />
+        <div className="p-8 md:w-1/2 text-gray-500">
+          <h5 className="font-bold text-blue-400 mb-2">
+            Welcome to Tusker Lodge
+          </h5>
+          <h1 className="mb-6 text-4xl font-bold">
+            Experience Torquay with us
+          </h1>
           <p className="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             sit amet sem semper, elementum lorem in, sollicitudin nunc. Fusce
@@ -23,13 +35,6 @@ export default function Featured() {
             elit ultrices sagittis. Nulla sollicitudin metus nisl.
           </p>
         </div>
-        <Image
-          className="rounded rounded-lg shadow-md border w-1/2"
-          src={HarbourImage}
-          alt="Torquay Harbour"
-          height={500}
-          width={500}
-        />
       </div>
     </section>
   );
