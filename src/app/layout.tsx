@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Tinos } from "next/font/google";
+import { Inter, Tinos } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const tinos = Tinos({
-  variable: "--font-tions-serif",
+const inter = Inter({
+  variable: "--font-inter-sans",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-
 export const metadata: Metadata = {
   title: "Tusker Lodge",
   description: "Pet friendly bed and breakfast (B&B) in Torquay, Devon, UK",
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${tinos.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
         <Footer />

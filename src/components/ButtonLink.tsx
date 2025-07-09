@@ -5,11 +5,12 @@ export type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
 };
+
 export default function ButtonLink(props: ButtonLinkProps) {
   return (
     <Link
       href={props.href}
-      className="bg-orange-400 px-8 py-4 rounded-lg text-orange-100"
+      className="bg-[#2196f3] px-4 py-2 rounded-lg text-blue-100 font-bold"
     >
       {props.children}
     </Link>
