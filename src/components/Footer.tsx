@@ -13,7 +13,7 @@ const FooterHeading = (props: { children: React.ReactNode }) => {
 
 export default function Footer() {
   return (
-    <div className="py-12 px-8 text-gray-500">
+    <section className="py-12 px-8 text-gray-500">
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-between">
         <div>
           <Image
@@ -81,6 +81,6 @@ export default function Footer() {
           </ol>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

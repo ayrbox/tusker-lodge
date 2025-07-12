@@ -4,7 +4,7 @@ import HarbourImage from "@/images/featured-torquay-harbour.jpg";
 export default function Featured() {
   return (
     <section>
-      <div className="container mx-auto py-8 flex flex-col items-center md:flex-row gap-4">
+      <div className="container mx-auto mb-16 py-8 flex flex-col items-center md:flex-row gap-4">
         <Image
           className="rounded rounded-lg shadow-md border md:w-1/2"
           src={HarbourImage}
