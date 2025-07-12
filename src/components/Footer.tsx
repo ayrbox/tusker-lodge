@@ -2,6 +2,7 @@ import React from "react";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import Link from "next/link";
+import LogoImage from "@/images/logo.jpg";
 
 const FooterHeading = (props: { children: React.ReactNode }) => {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-between">
         <div>
           <Image
-            src="/logo.jpg"
+            src={LogoImage}
             alt="Tusker Lodge Logo"
             width={200}
             height={60}

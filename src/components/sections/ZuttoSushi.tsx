@@ -15,7 +15,7 @@ export default function ZuttoSushi() {
           Zutto Sushi
         </h1>
         <p className="mb-8 text-gray-200 font-bold">
-          Experience Zutto Sushi from our safe.
+          Experience Zutto Sushi from our Chef.
         </p>
         <div>
           <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
