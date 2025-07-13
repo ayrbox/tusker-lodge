@@ -39,15 +39,17 @@ export default function Rooms() {
         <Room name="Doubles" info="Starting from £50" image={DoubleRoomImage} />
         <Room name="Singles" info="Starting from £50" image={SingleRoomImage} />
       </div>
-      <div className="lg:w-1/2 py-16 px-8 flex flex-col gap-4 text-center justify-between">
-        <h1 className="text-3xl text-gray-700 font-bold">Our Rooms</h1>
-        <p className="text-gray-500">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal.
-        </p>
-        <div>
-          <ButtonLink href="./all-rooms">View Rooms</ButtonLink>
+      <div className="lg:w-1/2 px-8 md:py-8 flex justify-center items-center">
+        <div className="p-4 flex flex-col gap-3 text-center justify-between">
+          <h1 className="text-3xl text-gray-700 font-bold">Our Rooms</h1>
+          <p className="text-gray-500">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal.
+          </p>
+          <div>
+            <ButtonLink href="./all-rooms">View Rooms</ButtonLink>
+          </div>
         </div>
       </div>
     </section>
