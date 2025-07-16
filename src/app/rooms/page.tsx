@@ -12,7 +12,7 @@ export default function RoomsPage() {
         <h1 className="text-3xl font-bold text-center text-gray-600 pb-8">
           Our Rooms
         </h1>
-        <p className="pb-8 w-full md:w-1/2 text-gray-400">
+        <p className="pb-8 w-full lg:w-1/2 text-gray-400">
           Our accommodation comprises of Single rooms and Double rooms. The
           bedrooms are spread over our three story Guest House with various
           south facing rooms having views over picturesque Torwood gardens. To
@@ -20,7 +20,7 @@ export default function RoomsPage() {
           area also overlooking Torwood gardens.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <RoomCard
           name="Family Room"
           info="Starting from £50"
