@@ -39,7 +39,7 @@ export default function Rooms() {
         <Room name="Doubles" info="Starting from £50" image={DoubleRoomImage} />
         <Room name="Singles" info="Starting from £50" image={SingleRoomImage} />
       </div>
-      <div className="lg:w-1/2 px-8 md:py-8 flex justify-center items-center">
+      <div className="lg:w-1/2 px-8 py-8 flex justify-center items-center">
         <div className="p-4 flex flex-col gap-3 text-center justify-between">
           <h1 className="text-3xl text-gray-700 font-bold">Our Rooms</h1>
           <p className="text-gray-500">
