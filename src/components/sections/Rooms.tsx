@@ -48,7 +48,7 @@ export default function Rooms() {
             of using Lorem Ipsum is that it has a more-or-less normal.
           </p>
           <div>
-            <ButtonLink href="./all-rooms">View Rooms</ButtonLink>
+            <ButtonLink href="./rooms">View Rooms</ButtonLink>
           </div>
         </div>
       </div>
