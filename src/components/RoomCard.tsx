@@ -8,9 +8,9 @@ export default function RoomCard(props: {
   href: string;
 }) {
   return (
-    <div className="relative group border border-gray-400 rounded-lg">
-      <Image className="rounded-t-lg" src={props.image} alt={props.name} />
-      <div className="py-4 px-8 flex items-center justify-between">
+    <div className="relative group shadow-md rounded-xl">
+      <Image className="rounded-t-xl" src={props.image} alt={props.name} />
+      <div className="py-4 px-8 flex items-center justify-between border-b border-l border-r border-gray-300 rounded-b-xl">
         <div>
           <h3 className="text-xl font-bold text-gray-600">{props.name}</h3>{" "}
           <p className="text-sm text-gray-500">{props.info}</p>
