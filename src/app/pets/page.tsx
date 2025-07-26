@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function AttractionsPage() {
+export default function PetsPage() {
   return (
     <div className="">
       <h1 className="text-4xl mb-2">
