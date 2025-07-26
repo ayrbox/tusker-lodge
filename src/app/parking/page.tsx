@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-export default function PetsPage() {
+export default function ParkingPage() {
   return (
     <div className="">
       <h1 className="text-4xl mb-2">Parking at Tusker Lodge</h1>
