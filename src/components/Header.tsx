@@ -9,13 +9,53 @@ import { PhoneCallIcon, MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
 
+type Nav = {
+  name: string;
+  text: string;
+  url: string;
+};
+
+const navigations: Nav[] = [
+  {
+    name: "home",
+    text: "Home",
+    url: "/",
+  },
+  {
+    name: "our-rooms",
+    text: "Our Rooms",
+    url: "/rooms",
+  },
+  {
+    name: "attractions",
+    text: "Local Attractions",
+    url: "/attractions",
+  },
+  {
+    name: "pets",
+    text: "Pets",
+    url: "/pets",
+  },
+  {
+    name: "parking",
+    text: "Parking",
+    url: "/parking",
+  },
+  {
+    name: "contact",
+    text: "Contact",
+    url: "/contact",
+  },
+];
+
 export default function Header() {
   const [menu, setMenu] = useState(true);
 
-  const handleMenuToggle: React.MouseEventHandler = (e) => {
-    e.preventDefault();
-    setMenu((m) => !m);
-  };
+  const handleMenuToggle: (open: boolean) => React.MouseEventHandler =
+    (open) => (e) => {
+      e.preventDefault();
+      setMenu(open);
+    };
 
   return (
     <div className="p-2">
@@ -30,24 +70,11 @@ export default function Header() {
         </Link>
 
         <ol className="hidden lg:flex align-items gap-4">
-          <li>
-            <NavItem text="Home" url="/" />
-          </li>
-          <li>
-            <NavItem text="Our Rooms" url="/rooms" />
-          </li>
-          <li>
-            <NavItem text="Local Attraction" url="/attractions" />
-          </li>
-          <li>
-            <NavItem text="Pets" url="/pets" />
-          </li>
-          <li>
-            <NavItem text="Parking" url="/parking" />
-          </li>
-          <li>
-            <NavItem text="Contact" url="/contact" />
-          </li>
+          {navigations.map((n) => (
+            <li key={n.name}>
+              <NavItem text={n.text} url={n.url} />
+            </li>
+          ))}
         </ol>
 
         <div className="hidden relative md:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700">
@@ -63,21 +90,24 @@ export default function Header() {
           </p>
         </div>
 
-        <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
+        <ButtonLink
+          className="hidden md:block"
+          href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm"
+        >
           Check Availability
         </ButtonLink>
 
-        <button onClick={handleMenuToggle}>
+        <button className="block lg:hidden" onClick={handleMenuToggle(true)}>
           <MenuIcon />
         </button>
         <div
           className={clsx(
-            "z-1 absolute inset-0 bg-gray-900 opacity-25",
+            "z-1 absolute inset-0 bg-stone-950 opacity-75",
             menu && "block",
             !menu && "hidden",
           )}
           role="button"
-          onClick={handleMenuToggle}
+          onClick={handleMenuToggle(false)}
         ></div>
         <section
           className={clsx(
@@ -88,9 +118,19 @@ export default function Header() {
         >
           <div className="">
             <h1>Menu Here</h1>
-            <button onClick={handleMenuToggle}>
+            <button onClick={handleMenuToggle(false)}>
               <XIcon />
             </button>
+
+            <ol className="flex flex-col align-items gap-4">
+              {navigations.map((n) => (
+                <li key={n.name}>
+                  <Link href={n.url} className="hover:text-blue-500">
+                    {n.text}
+                  </Link>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
       </div>
