@@ -49,11 +49,10 @@ const navigations: Nav[] = [
 ];
 
 export default function Header() {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const handleMenuToggle: (open: boolean) => React.MouseEventHandler =
-    (open) => (e) => {
-      e.preventDefault();
+    (open) => () => {
       setMenu(open);
     };
 
@@ -69,7 +68,8 @@ export default function Header() {
           />
         </Link>
 
-        <ol className="hidden lg:flex align-items gap-4">
+        {/* Desktop horizontal menu */}
+        <ol className="hidden lg:flex align-items gap-6">
           {navigations.map((n) => (
             <li key={n.name}>
               <NavItem text={n.text} url={n.url} />
@@ -77,12 +77,13 @@ export default function Header() {
           ))}
         </ol>
 
+        {/* Contact info - visible on medium screens and up */}
         <div className="hidden relative md:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700">
           <div className="p-3 row-span-2 rounded-full bg-orange-500">
             <PhoneCallIcon className="text-orange-100" />
           </div>
-          <p className="text-gray-400">Call Us</p>
-          <p className="text-gray-700">
+          <p className="text-gray-400 text-sm">Call Us</p>
+          <p className="text-gray-700 font-semibold">
             <a href="tel:+441803292668">
               <span className="absolute inset-0"></span>
               +44 1803 292668
@@ -90,49 +91,97 @@ export default function Header() {
           </p>
         </div>
 
-        <ButtonLink
-          className="hidden md:block"
-          href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm"
-        >
-          Check Availability
-        </ButtonLink>
+        {/* Book button - hidden on mobile to make room for burger menu */}
+        <div className="hidden md:block">
+          <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
+            Check Availability
+          </ButtonLink>
+        </div>
 
-        <button className="block lg:hidden" onClick={handleMenuToggle(true)}>
-          <MenuIcon />
+        {/* Mobile burger menu button */}
+        <button
+          className="block lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+          onClick={handleMenuToggle(true)}
+          aria-label="Open menu"
+        >
+          <MenuIcon className="h-6 w-6" />
         </button>
+
+        {/* Overlay */}
         <div
           className={clsx(
-            "z-1 absolute inset-0 bg-stone-950 opacity-75",
-            menu && "block",
-            !menu && "hidden",
+            "fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300",
+            menu ? "opacity-100" : "opacity-0 pointer-events-none",
           )}
           role="button"
           onClick={handleMenuToggle(false)}
         ></div>
-        <section
+
+        {/* Sidebar menu */}
+        <aside
           className={clsx(
-            "absolute top-0 bottom-0 right-0 bg-gray-200 z-1 transition-all duration-150 ease-in-out",
-            menu && "w-100",
-            !menu && "w-0",
+            "fixed top-0 right-0 h-full bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out",
+            "w-80 max-w-[85vw]",
+            menu ? "translate-x-0" : "translate-x-full",
           )}
         >
-          <div className="">
-            <h1>Menu Here</h1>
-            <button onClick={handleMenuToggle(false)}>
-              <XIcon />
-            </button>
+          <div className="flex flex-col h-full">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800">Menu</h2>
+              <button
+                onClick={handleMenuToggle(false)}
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                aria-label="Close menu"
+              >
+                <XIcon className="h-6 w-6" />
+              </button>
+            </div>
 
-            <ol className="flex flex-col align-items gap-4">
-              {navigations.map((n) => (
-                <li key={n.name}>
-                  <Link href={n.url} className="hover:text-blue-500">
-                    {n.text}
-                  </Link>
-                </li>
-              ))}
-            </ol>
+            {/* Navigation */}
+            <nav className="flex-1 px-4 py-6">
+              <ol className="space-y-4">
+                {navigations.map((n) => (
+                  <li key={n.name}>
+                    <Link
+                      href={n.url}
+                      className="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
+                      onClick={handleMenuToggle(false)}
+                    >
+                      {n.text}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+
+            {/* Footer with contact and booking */}
+            <div className="border-t border-gray-200 p-4 space-y-4">
+              {/* Contact info */}
+              <div className="flex items-center gap-3 text-gray-700">
+                <div className="p-2 rounded-full bg-orange-500">
+                  <PhoneCallIcon className="text-orange-100 h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Call Us</p>
+                  <p className="font-semibold">
+                    <a href="tel:+441803292668">+44 1803 292668</a>
+                  </p>
+                </div>
+              </div>
+
+              {/* Book button */}
+              <div className="w-full">
+                <ButtonLink
+                  href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm"
+                  className="w-full text-center"
+                >
+                  Check Availability
+                </ButtonLink>
+              </div>
+            </div>
           </div>
-        </section>
+        </aside>
       </div>
     </div>
   );
