@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 import ButtonLink from "../ButtonLink";
 
 export default function CheckAvailablity() {
@@ -22,7 +24,14 @@ export default function CheckAvailablity() {
             Check Availability
           </ButtonLink>
         </form>
+
+        <div className="ftb_widget ftb_thin"></div>
       </div>
+
+      <Script
+        src="https://static.freetobook.com/widgets/js/1729c192.js"
+        strategy="lazyOnload"
+      />
     </section>
   );
 }
