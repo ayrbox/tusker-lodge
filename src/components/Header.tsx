@@ -128,7 +128,12 @@ export default function Header() {
           <div className="flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800">Menu</h2>
+              <Image
+                src={LogoImage}
+                alt="Tusker Lodge Logo"
+                width={200}
+                height={60}
+              />
               <button
                 onClick={handleMenuToggle(false)}
                 className="p-2 rounded-md hover:bg-gray-100 transition-colors"
