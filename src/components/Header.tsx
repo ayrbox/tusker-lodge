@@ -92,10 +92,18 @@ export default function Header() {
         </div>
 
         {/* Book button - hidden on mobile to make room for burger menu */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center content-center gap-x-2">
           <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
-            Check Availability
+            Book Directly
           </ButtonLink>
+          <Link
+            href="https://www.booking.com/hotel/gb/sceptrelodgehotel.en-gb.html?aid=304142#availability_target"
+            title="Check Availability in 'booking-directly.com'"
+            className="border rounded-md border border-transparent bg-[#003b95] px-8 py-3 text-base font-medium text-white hover:bg-[#006ce4] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+            target="_blank"
+          >
+            Booking.com
+          </Link>
         </div>
 
         {/* Mobile burger menu button */}

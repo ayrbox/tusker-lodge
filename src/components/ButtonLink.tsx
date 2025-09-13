@@ -13,9 +13,10 @@ export default function ButtonLink(props: ButtonLinkProps) {
     <Link
       href={props.href}
       title="Check Availability in 'booking-directly.com'"
+      target="_blank"
       className={clsx(
-        "hidden md:block bg-[#2196f3] px-4 py-2 rounded-lg text-blue-100 font-bold",
-        props.className
+        "border rounded-md border border-transparent bg-[#009ffd] px-8 py-3 text-base font-medium text-white hover:bg-[#ffa400] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden",
+        props.className,
       )}
     >
       {props.children}
