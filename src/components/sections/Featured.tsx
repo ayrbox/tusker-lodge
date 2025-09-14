@@ -19,20 +19,47 @@ export default function Featured() {
           <h1 className="mb-6 text-4xl font-bold">
             Experience Torquay with us
           </h1>
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            sit amet sem semper, elementum lorem in, sollicitudin nunc. Fusce
-            gravida semper est vel elementum. In vehicula arcu nec cursus
-            vehicula. Nullam risus nisi, cursus a posuere eu, egestas placerat
-            massa. Nulla ut scelerisque augue. Phasellus at mattis ante, a
-            euismod risus. Mauris a massa ipsum.
+          <p className="mb-3">
+            Welcome to Tusker Lodge, your home away from home in the heart of
+            beautiful Torquay, Devon. Nestled just a pleasant 10-minute stroll
+            from the vibrant Torquay harbour, our charming bed and breakfast
+            offers the perfect blend of comfort, convenience, and coastal charm.
           </p>
-          <p>
-            Nunc consequat sem orci, ut ultricies magna auctor vitae. Aenean
-            vulputate, quam eu suscipit ultrices, justo nisi aliquam nisi, sed
-            tristique quam orci at metus. Quisque elementum ac turpis ac auctor.
-            Donec ultrices urna sed fermentum eleifend. Proin eget turpis eget
-            elit ultrices sagittis. Nulla sollicitudin metus nisl.
+          <p className="mb-3">
+            Run with warmth and dedication by Sandy and his wife, Tusker Lodge
+            reflects our passion for hospitality. Sandy brings his professional
+            culinary expertise to your breakfast table each morning, drawing
+            from years of experience as a chef. For those seeking something
+            special, don't miss our weekend takeaway service featuring Sandy's
+            exceptional Japanese cuisine – a unique treat you won't find at
+            other local accommodations.
+          </p>
+          <p className="mb-3">
+            Our nine thoughtfully appointed rooms cater to every traveler's
+            needs, whether you're seeking a cozy single retreat, a romantic
+            double, or a spacious triple for the whole family. And speaking of
+            family – we haven't forgotten your four-legged companions! As a
+            pet-friendly establishment, we welcome well-behaved pets because we
+            know they're part of your travel story too.
+          </p>
+          <p className="mb-3">
+            Location is everything, and Tusker Lodge delivers. With public
+            transport links directly across the road, exploring the English
+            Riviera couldn't be easier. Spend your days discovering Torquay's
+            stunning beaches, historic harbor, and charming town center, then
+            return to the comfort and tranquility of our lodge.
+          </p>
+          <p className="mb-3">
+            Whether you're here for a seaside escape, a family adventure, or a
+            peaceful retreat, Tusker Lodge provides the perfect base for your
+            Torquay experience. We look forward to welcoming you and sharing the
+            best of Devon hospitality.
+          </p>
+          <p className="mb-3">
+            <strong>
+              Book your stay today and discover why our guests return year after
+              year.
+            </strong>
           </p>
         </div>
       </div>
