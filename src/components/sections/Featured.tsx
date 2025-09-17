@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HarbourImage from "@/images/featured-torquay-harbour.jpg";
+import HarbourImage from "@/images/hero-banner.jpg";
 
 export default function Featured() {
   return (
