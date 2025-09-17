@@ -15,7 +15,7 @@ export default function ButtonLink(props: ButtonLinkProps) {
       title="Check Availability in 'booking-directly.com'"
       target="_blank"
       className={clsx(
-        "border rounded-md border border-transparent bg-[#009ffd] px-8 py-3 text-base font-medium text-white hover:bg-[#ffa400] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden",
+        "border rounded-full border border-transparent bg-[#009ffd] px-8 py-3 text-base font-medium text-white hover:bg-[#ffa400] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden",
         props.className,
       )}
     >
