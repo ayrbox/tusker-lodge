@@ -8,6 +8,7 @@ import ButtonLink from "./ButtonLink";
 import { PhoneCallIcon, MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
+import { BookingCTA } from "./BookingCTA";
 
 type Nav = {
   name: string;
@@ -69,7 +70,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop horizontal menu */}
-        <ol className="hidden lg:flex align-items gap-6">
+        <ol className="hidden xl:flex align-items gap-6">
           {navigations.map((n) => (
             <li key={n.name}>
               <NavItem text={n.text} url={n.url} />
@@ -77,43 +78,43 @@ export default function Header() {
           ))}
         </ol>
 
-        {/* Contact info - visible on medium screens and up */}
-        <div className="hidden relative md:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700">
-          <div className="p-3 row-span-2 rounded-full bg-orange-500">
-            <PhoneCallIcon className="text-orange-100" />
+        <div className="flex items-center content-center gap-x-2">
+          <div className="hidden relative xl:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700 mr-4">
+            <div className="p-3 row-span-2 rounded-full bg-orange-500">
+              <PhoneCallIcon className="text-orange-100" />
+            </div>
+            <p className="text-gray-400 text-sm">Call Us</p>
+            <p className="text-gray-700 font-semibold">
+              <a href="tel:+441803292668">
+                <span className="absolute inset-0"></span>
+                +44 1803 292668
+              </a>
+            </p>
           </div>
-          <p className="text-gray-400 text-sm">Call Us</p>
-          <p className="text-gray-700 font-semibold">
-            <a href="tel:+441803292668">
-              <span className="absolute inset-0"></span>
-              +44 1803 292668
-            </a>
-          </p>
-        </div>
 
-        {/* Book button - hidden on mobile to make room for burger menu */}
-        <div className="hidden md:flex items-center content-center gap-x-2">
-          <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
+          <BookingCTA
+            href={process.env.NEXT_PUBLIC_BOOKING_DIRECTLY}
+            className="hidden md:block"
+          >
             Book Directly
-          </ButtonLink>
-          <Link
-            href="https://www.booking.com/hotel/gb/sceptrelodgehotel.en-gb.html?aid=304142#availability_target"
-            title="Check Availability in 'booking-directly.com'"
-            className="border rounded-full border border-transparent bg-[#003b95] px-8 py-3 text-base font-medium text-white hover:bg-[#006ce4] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
-            target="_blank"
+          </BookingCTA>
+          <BookingCTA
+            href={process.env.NEXT_PUBLIC_BOOKING_DOT_COM}
+            variant="booking"
+            className="hidden md:block"
           >
             Booking.com
-          </Link>
-        </div>
+          </BookingCTA>
 
-        {/* Mobile burger menu button */}
-        <button
-          className="block lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
-          onClick={handleMenuToggle(true)}
-          aria-label="Open menu"
-        >
-          <MenuIcon className="h-6 w-6" />
-        </button>
+          {/* Mobile burger menu button */}
+          <button
+            className="block xl:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+            onClick={handleMenuToggle(true)}
+            aria-label="Open menu"
+          >
+            <MenuIcon className="h-6 w-6" />
+          </button>
+        </div>
 
         {/* Overlay */}
         <div
@@ -170,27 +171,28 @@ export default function Header() {
 
             {/* Footer with contact and booking */}
             <div className="border-t border-gray-200 p-4 space-y-4">
-              {/* Contact info */}
-              <div className="flex items-center gap-3 text-gray-700">
-                <div className="p-2 rounded-full bg-orange-500">
-                  <PhoneCallIcon className="text-orange-100 h-4 w-4" />
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-gray-700">
+                  <div className="p-2 rounded-full bg-orange-500">
+                    <PhoneCallIcon className="text-orange-100 h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">Call Us</p>
+                    <p className="font-semibold">
+                      <a href="tel:+441803292668">+44 1803 292668</a>
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Call Us</p>
-                  <p className="font-semibold">
-                    <a href="tel:+441803292668">+44 1803 292668</a>
-                  </p>
-                </div>
-              </div>
 
-              {/* Book button */}
-              <div className="w-full">
-                <ButtonLink
-                  href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm"
-                  className="w-full text-center"
+                <BookingCTA href={process.env.NEXT_PUBLIC_BOOKING_DIRECTLY}>
+                  Book Directly
+                </BookingCTA>
+                <BookingCTA
+                  href={process.env.NEXT_PUBLIC_BOOKING_DOT_COM}
+                  variant="booking"
                 >
-                  Check Availability
-                </ButtonLink>
+                  Booking.com
+                </BookingCTA>
               </div>
             </div>
           </div>
