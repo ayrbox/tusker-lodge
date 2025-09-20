@@ -1,18 +1,24 @@
 import Image from "next/image";
 import HarbourImage from "@/images/hero-banner.jpg";
+import BG from "@/images/bg/featured_bg.jpg";
 
 export default function Featured() {
   return (
-    <section>
-      <div className="container mx-auto mb-16 py-8 flex flex-col items-center md:flex-row gap-4">
-        <Image
-          className="rounded rounded-lg shadow-md border md:w-1/2"
-          src={HarbourImage}
-          alt="Torquay Harbour"
-          height={500}
-          width={500}
-        />
-        <div className="p-8 md:w-1/2 text-gray-500">
+    <section
+      className="relative py-10 bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: `url(${BG.src})`,
+      }}
+    >
+      <div className="container mx-auto mb-16 py-8 flex flex-col xl:flex-row">
+        <div className="p-8 xl:w-1/2">
+          <Image
+            className="rounded rounded-lg shadow-md h-full object-cover"
+            src={HarbourImage}
+            alt="Torquay Harbour"
+          />
+        </div>
+        <div className="p-8 xl:w-1/2 text-gray-500">
           <h5 className="font-bold text-blue-400 mb-2">
             Welcome to Tusker Lodge
           </h5>
