@@ -58,7 +58,7 @@ export default function Header() {
     };
 
   return (
-    <div className="p-2">
+    <div className="p-8">
       <div className="container mx-auto py-3 flex justify-between items-center">
         <Link href="/">
           <Image
