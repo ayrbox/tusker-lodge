@@ -10,7 +10,7 @@ export default function Hero() {
         backgroundImage: `url(${TorquayHarbourImage.src})`,
       }}
     >
-      <div className="relative container mx-auto py-32 lg:p-40 flex flex-col text-center md:text-left">
+      <div className="relative container mx-auto px-8 py-32 xl:p-40 flex flex-col text-center md:text-left">
         <h1 className="text-5xl md:text-6xl text-gray-200 text-shadow-lg">
           Experience Torquay with
           <span className="font-bold"> Tusker Lodge</span>
@@ -19,7 +19,7 @@ export default function Hero() {
           Sandy welcomes you to Tusker Lodge in Torquay Harbour, located in
           heart of English Riviera.
         </p>
-        <div className="flex gap-4 justify-items-end">
+        <div className="flex flex-col md:flex-row gap-4 justify-items-end">
           <BookingCTA href={process.env.NEXT_PUBLIC_BOOKING_DIRECTLY}>
             Book Directly
           </BookingCTA>
