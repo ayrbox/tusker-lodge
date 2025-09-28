@@ -33,8 +33,9 @@ export default function Featured() {
           <p className="mb-3">
             Run by Sandy (a professional chef) and his wife, we bring genuine
             warmth and exceptional hospitality to your Devon getaway. Start each
-            day with Sandy's expertly crafted breakfast, and don't miss his
-            weekend Japanese takeaway – a delicious surprise that sets us apart!
+            day with Sandy&apos;s expertly crafted breakfast, and don&apos;t
+            miss his weekend Japanese takeaway – a delicious surprise that sets
+            us apart!
           </p>
           <p className="mb-3">
             With 9 comfortable rooms (singles, doubles, and triples) and a
@@ -44,11 +45,12 @@ export default function Featured() {
             <strong className="text-lg">English Riviera</strong> offers.
           </p>
           <p className="mb-3">
-            Whether you're seeking seaside adventures, family fun, or a peaceful
-            escape, Tusker Lodge is your ideal home base in beautiful Torquay.
+            Whether you&apos;re seeking seaside adventures, family fun, or a
+            peaceful escape, Tusker Lodge is your ideal home base in beautiful
+            Torquay.
           </p>
           <p className="mb-3 text-lg">
-            <strong>We can't wait to welcome you!</strong>
+            <strong>We can&apos;t wait to welcome you!</strong>
           </p>
         </div>
       </div>
