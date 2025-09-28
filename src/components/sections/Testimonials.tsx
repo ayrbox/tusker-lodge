@@ -4,29 +4,39 @@ import { useState, useEffect, useRef } from "react";
 
 const testimonials = [
   {
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.",
-    name: "Isabel Rowla",
-    title: "Customer",
+    title: "A fantastic impromptu overnight stay!",
+    text: `We checked in for a last minute overnight stay. The host was very welcoming and friendly, the room was very clean and well stocked with tea & coffee, the bathroom had shampoos and body cream.
+We were even able to have our dog stay over with us! Very comfortable mattress and lovely view over Torwood Gardens.`,
+    name: "Trudi",
+    source: "Booking.com",
   },
   {
-    text: "Tusker Lodge provided an exceptional experience for our family vacation. The pet-friendly amenities made it perfect for our furry companions, and the staff went above and beyond.",
-    name: "James Mitchell",
-    title: "Family Guest",
+    title: "Lovely place",
+    text: "A really great place to stay: excellent location, lovely hosts, a lot of character to the place, next to a sweet little park.",
+    name: "Elena",
+    source: "Booking.com",
   },
   {
-    text: "The location in Torquay is absolutely stunning, and the rooms are beautifully appointed. We couldn't have asked for a better place to stay during our Devon getaway.",
-    name: "Sarah Thompson",
-    title: "Couple's Retreat",
+    title: "Wonderful place and location.",
+    text: `The couple running this Guest house are very kind and welcoming. They work hard to make the guests feel comfortable.
+It is dog-friendly, so we took our little dog.
+It is very close to the marina and centre, but there is no noise.
+If you go with your dog there is a lovely garden just across the road.`,
+    name: "Viviana Williams",
+    source: "Google Reviews",
   },
   {
-    text: "As pet owners, finding quality accommodation that welcomes our dogs can be challenging. Tusker Lodge exceeded all expectations with their genuine pet-friendly approach.",
-    name: "Michael Davies",
-    title: "Pet Owner",
+    title: "Beautiful Little Gem",
+    text: "Really enjoyed my stay at this beautiful little gem. The owner was lovely. The room was beautiful. The location was perfect. It was very clean and very reasonably priced.",
+    name: "Jolene Davies",
+    source: "Google Reviews",
   },
   {
-    text: "The breakfast was delicious, the rooms were spotless, and the hospitality was outstanding. We'll definitely be returning to Tusker Lodge for our next visit to Devon.",
-    name: "Emma Wilson",
-    title: "Returning Guest",
+    title: "Stay was lovely, clean and comfortable",
+    text: `The stay was lovely, very clean and comfortable room,great location close to the harbour and shopping. It was a great breakfast, and Sandy and his wife were fantastic. They made us feel very welcome,
+We hope to be back for a longer visit in the future.`,
+    name: "Sharon & Dave",
+    source: "Google Reviews",
   },
 ];
 
@@ -68,7 +78,7 @@ export default function Testimonials() {
     if (Math.abs(deltaX) > threshold) {
       if (deltaX > 0) {
         setCurrentIndex((prevIndex) =>
-          prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+          prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
         );
       } else {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -112,7 +122,7 @@ export default function Testimonials() {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     } else {
       setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
       );
     }
 
@@ -124,9 +134,9 @@ export default function Testimonials() {
   return (
     <section className="py-32">
       <div className="container mx-auto flex flex-col gap-6 items-center text-center">
-        <h1 className="text-3xl text-gray-500 font-bold">Testimonials</h1>
+        <h1 className="text-lg text-gray-500 font-bold">Testimonials</h1>
         <div
-          className="w-full md:w-lg cursor-grab active:cursor-grabbing select-none"
+          className="w-full p-8 xl:w-2/3 cursor-grab active:cursor-grabbing select-none text-lg text-gray-800"
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
@@ -136,12 +146,15 @@ export default function Testimonials() {
           onTouchEnd={handleTouchEnd}
           onWheel={handleWheel}
         >
-          <p className="text-sm transition-opacity duration-500">
+          <h2 className="text-2xl font-bold my-3">
+            {currentTestimonial.title}
+          </h2>
+          <p className="text-lg transition-opacity duration-500">
             &quot;{currentTestimonial.text}&quot;
           </p>
           <div className="transition-opacity duration-500 mt-6">
             <h5 className="font-bold">{currentTestimonial.name}</h5>
-            <p className="text-xs -mt-1">{currentTestimonial.title}</p>
+            <p className="text-sm -mt-1">{currentTestimonial.source}</p>
           </div>
         </div>
         <div className="flex gap-2 mt-4">
