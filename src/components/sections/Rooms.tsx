@@ -1,28 +1,64 @@
 import Image, { StaticImageData } from "next/image";
-import ButtonLink from "../ButtonLink";
 import KingRoomImage from "@/images/rooms/king.jpg";
 import FamilyRoomImage from "@/images/rooms/family.jpg";
-import DoubleRoomImage from "@/images/rooms/singles.jpg";
+import DoubleRoomImage from "@/images/rooms/doubles.jpg";
 import SingleRoomImage from "@/images/rooms/singles.jpg";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
-const Room = (props: {
+export type RoomProps = {
   image: StaticImageData;
   name: string;
-  info: string;
-}) => {
+  href: string;
+};
+
+const Room = (props: RoomProps) => {
   return (
-    <div className="relative group">
-      <div className="absolute inset-0 bg-gray-900 opacity-40 group-hover:hidden"></div>
-      <Image src={props.image} alt={props.name} />
-      <div className="absolute left-6 bottom-6 py-4 px-8 text-white transition-all group-hover:-translate-y-4 group-hover:bg-gray-700 rounded-md">
-        <h3 className="text-xl font-bold">{props.name}</h3>
-        <p className="text-sm">{props.info}</p>
+    <div className="relative group text-white">
+      <div aria-hidden="true" className="absolute inset-0">
+        <Image
+          className="object-cover h-full w-full"
+          src={props.image}
+          alt={props.name}
+        />
+      </div>
+      <div className="absolute inset-0 bg-linear-to-t from-[#1a627d] to-transparent"></div>
+      <div className="absolute inset-0 p-4 flex items-end">
+        <div>
+          <h3 className="text-xl font-bold">{props.name}</h3>
+          <Link className="flex" href={props.href}>
+            <span className="absolute inset-0"></span>
+            <span>View</span>
+            <ArrowRightIcon className="transition-all group-hover:translate-x-4" />
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
+
+const roomsInfo: RoomProps[] = [
+  {
+    name: "Family Room",
+    image: FamilyRoomImage,
+    href: "./rooms/family",
+  },
+  {
+    name: "King & Queen Room",
+    image: KingRoomImage,
+    href: "./rooms/king",
+  },
+  {
+    name: "Doubles",
+    image: DoubleRoomImage,
+    href: "./rooms/doubles",
+  },
+  {
+    name: "Singles",
+    image: SingleRoomImage,
+    href: "./rooms/singles",
+  },
+];
 
 export default function Rooms() {
   return (
@@ -42,19 +78,10 @@ export default function Rooms() {
           </Link>
         </div>
       </div>
-      <div className="xl:w-1/2 grid md:grid-cols-2">
-        <Room
-          name="Family Room"
-          info="Starting from £50"
-          image={FamilyRoomImage}
-        />
-        <Room
-          name="King &amp; Queen Room"
-          info="Starting from £50"
-          image={KingRoomImage}
-        />
-        <Room name="Doubles" info="Starting from £50" image={DoubleRoomImage} />
-        <Room name="Singles" info="Starting from £50" image={SingleRoomImage} />
+      <div className="xl:w-1/2 grid md:grid-cols-2 h-dvh xl:h-[32rem]">
+        {roomsInfo.map((r) => (
+          <Room key={r.name} name={r.name} image={r.image} href={r.href} />
+        ))}
       </div>
     </section>
   );
