@@ -4,7 +4,6 @@ import NavItem from "./NavItem";
 import Image from "next/image";
 
 import LogoImage from "@/images/logo.jpg";
-import ButtonLink from "./ButtonLink";
 import { PhoneCallIcon, MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
