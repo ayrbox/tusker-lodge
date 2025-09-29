@@ -33,7 +33,7 @@ const renderAttractionCategory = (props: AttractionCategory) => {
 
 export default function AttractionsPage() {
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
       {attractions.map((c) => renderAttractionCategory(c))}
     </div>
   );
