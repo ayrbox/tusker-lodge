@@ -20,7 +20,7 @@ const AttractionCard = (props: Attraction) => {
 
 const renderAttractionCategory = (props: AttractionCategory) => {
   return (
-    <div className="">
+    <div>
       <h2 className="text-2xl mb-4">{props.name}</h2>
       <ul role="list" className="space-y-2">
         {props.attractions.map((a) => (
