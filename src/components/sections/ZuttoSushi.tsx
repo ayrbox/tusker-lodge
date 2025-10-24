@@ -1,5 +1,6 @@
-import ButtonLink from "@/components/ButtonLink";
+import { ArrowRightIcon } from "lucide-react";
 import ZuttoSushiImage from "@/images/zutto-sushi.jpg";
+import Link from "next/link";
 
 export default function ZuttoSushi() {
   return (
@@ -17,10 +18,17 @@ export default function ZuttoSushi() {
         <p className="mb-8 text-gray-200 font-bold">
           Experience Zutto Sushi from our Chef.
         </p>
-        <div>
-          <ButtonLink href="https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm">
-            Learn Now
-          </ButtonLink>
+        <div className="flex justify-center">
+          <Link
+            href="https://www.zuttosushi.co.uk/"
+            target="_blank"
+            className="text-gray-100 rounded-full border-transparent bg-[#009ffd] px-8 py-3 text-base font-medium hover:bg-[#ffa400] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+          >
+            <div className="flex justify-center gap-2">
+              Learn Now
+              <ArrowRightIcon />
+            </div>
+          </Link>
         </div>
       </div>
     </section>
