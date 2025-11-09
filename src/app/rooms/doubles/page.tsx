@@ -12,7 +12,7 @@ export default function DoublesRoom() {
         className="pb-4"
       />
 
-      <Wrapper title="Single Rooms">
+      <Wrapper title="Compact Doubles">
         <Sidebar>
           <Facilities />
         </Sidebar>
@@ -21,26 +21,20 @@ export default function DoublesRoom() {
             <h3 className="sr-only">Description</h3>
             <div className="space-y-6">
               <p className="text-base text-gray-900">
-                Our Double Rooms includes double bed and well furnished for your
-                comfort stay. We have three equally sized double bed rooms.
+                Our Compact Double Rooms offer comfortable accommodation with a
+                standard 4'6" double bed and private en-suite shower room.
               </p>
 
               <p className="text-base text-gray-900">
                 <strong>Room 03</strong> is north facing and is situated on the
-                first floor. It is a “compact” double room with a standard 4’6”
-                double bed and en-suite shower room.
-              </p>
-
-              <p className="text-base text-gray-900">
-                <strong>Room 10</strong> is south facing and is situated on the
-                second floor. It is a “compact” king room with a 5&apos; king
-                &ldquo;zip-link&rdquo; bed and en-suite shower room.
+                first floor. It includes a standard 4'6" double bed and en-suite
+                shower room.
               </p>
 
               <p className="text-base text-gray-900">
                 <strong>Room 11</strong> is south facing and is situated on the
-                second floor. It is a “compact” double room with a standard 4’6”
-                double bed and en-suite shower room.
+                second floor. It includes a standard 4'6" double bed and
+                en-suite shower room.
               </p>
             </div>
           </div>

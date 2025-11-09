@@ -7,7 +7,7 @@ export default function QueenRoom() {
   return (
     <div className="flex flex-col items-center">
       <Image src={QueenRoomImage} alt="Queen Room - Room 3" className="pb-4" />
-      <Wrapper title="Room 3: Queen Room ">
+      <Wrapper title="Queen Room">
         <Sidebar>
           <Facilities />
         </Sidebar>
@@ -16,9 +16,10 @@ export default function QueenRoom() {
             <h3 className="sr-only">Description</h3>
             <div className="space-y-6">
               <p className="text-base text-gray-900">
-                Queen Room is our super king sized double, a spacious north
-                facing, first floor en-suite with a 6′ super king, sumptuously
-                comfortable double bed and a compact en-suite.
+                <strong>Room 07</strong> is our super king sized double room,
+                featuring a spacious north facing, first floor en-suite with a
+                6′ super king, sumptuously comfortable double bed and a compact
+                en-suite.
               </p>
             </div>
           </div>

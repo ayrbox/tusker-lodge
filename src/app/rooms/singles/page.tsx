@@ -20,27 +20,27 @@ export default function SinglesRoom() {
             <h3 className="sr-only">Description</h3>
             <div className="space-y-6">
               <p className="text-base text-gray-900">
-                All our single rooms well furnished with private en-suite shower
-                room.
+                We offer three single rooms, each well furnished and featuring
+                north facing views.
               </p>
 
-              <p>
-                <strong>Room 02</strong> is north facing large singleon the
-                first floor half landing which is accessible from the rear
-                entrance with few steps to navigate from the outside but there
-                are steps down to the breakfast room on the ground floor. This
+              <p className="text-base text-gray-900">
+                <strong>Room 02</strong> is a north facing large single on the
+                first floor half landing. This room is accessible from the rear
+                entrance, however there are steps to navigate from the outside
+                and steps down to the breakfast room on the ground floor. This
                 room has an en-suite shower room.
               </p>
 
-              <p>
+              <p className="text-base text-gray-900">
                 <strong>Room 08</strong> is north facing and situated on the
-                second floor with use of a shared bathroom. Refurbished in 2014
-                it has a 3’ single bed, wardrode and desk.
+                second floor. Refurbished in 2014, it has a 3' single bed,
+                wardrobe and desk, with use of a shared bathroom.
               </p>
 
-              <p>
+              <p className="text-base text-gray-900">
                 <strong>Room 12</strong> is a small north facing single situated
-                on the second floor with a 3’ bed and use of a shared bathroom.
+                on the second floor with a 3' bed and use of a shared bathroom.
                 Refurbished in 2013.
               </p>
             </div>

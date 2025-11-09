@@ -7,7 +7,7 @@ export default function KingRoom() {
   return (
     <div className="flex flex-col items-center">
       <Image src={KingRoomImage} alt="King Room - Room 2" className="pb-4" />
-      <Wrapper title="Room 2: King Comfort">
+      <Wrapper title="King Room">
         <Sidebar>
           <Facilities />
         </Sidebar>
@@ -16,10 +16,10 @@ export default function KingRoom() {
             <h3 className="sr-only">Description</h3>
             <div className="space-y-6">
               <p className="text-base text-gray-900">
-                Our King Room is a spacious and comfortable south facing king
-                sized double room with a 5’ zip and link double bed. Located on
-                the first floor with private en-suite shower room, a seating
-                area and views over the picturesque Torwood Gardens.
+                <strong>Room 04</strong> is a spacious and comfortable south
+                facing king sized double room with a 5' zip and link double bed.
+                Located on the first floor with private en-suite shower room, a
+                seating area and views overlooking Torwood Gardens.
               </p>
             </div>
           </div>
