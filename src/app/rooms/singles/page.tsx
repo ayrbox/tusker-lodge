@@ -1,16 +1,17 @@
-import Image from "next/image";
 import SinglesRoomImage from "@/images/rooms/singles.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
+import RoomCarousel from "@/components/RoomCarousel";
 
 export default function SinglesRoom() {
+  const images = [
+    { src: SinglesRoomImage, alt: "Singles Room - Room 4" },
+    { src: SinglesRoomImage, alt: "Singles Room - Room 4 (2)" },
+  ];
+
   return (
     <div className="flex flex-col items-center">
-      <Image
-        src={SinglesRoomImage}
-        alt="Singles Room - Room 4"
-        className="pb-4"
-      />
+      <RoomCarousel images={images} />
       <Wrapper title="Single Rooms">
         <Sidebar>
           <Facilities />
@@ -34,14 +35,14 @@ export default function SinglesRoom() {
 
               <p className="text-base text-gray-900">
                 <strong>Room 08</strong> is north facing and situated on the
-                second floor. Refurbished in 2014, it has a 3' single bed,
+                second floor. Refurbished in 2014, it has a 3&apos; single bed,
                 wardrobe and desk, with use of a shared bathroom.
               </p>
 
               <p className="text-base text-gray-900">
                 <strong>Room 12</strong> is a small north facing single situated
-                on the second floor with a 3' bed and use of a shared bathroom.
-                Refurbished in 2013.
+                on the second floor with a 3&apos; bed and use of a shared
+                bathroom. Refurbished in 2013.
               </p>
             </div>
           </div>

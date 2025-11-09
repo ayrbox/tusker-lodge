@@ -1,16 +1,17 @@
-import Image from "next/image";
 import DoublesRoomImage from "@/images/rooms/doubles.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
+import RoomCarousel from "@/components/RoomCarousel";
 
 export default function DoublesRoom() {
+  const images = [
+    { src: DoublesRoomImage, alt: "Doubles Room - Room 1" },
+    { src: DoublesRoomImage, alt: "Doubles Room - Room 1 (2)" },
+  ];
+
   return (
     <div className="flex flex-col items-center">
-      <Image
-        src={DoublesRoomImage}
-        alt="Doubles Room - Room 1"
-        className="pb-4"
-      />
+      <RoomCarousel images={images} />
 
       <Wrapper title="Compact Doubles">
         <Sidebar>
@@ -22,19 +23,20 @@ export default function DoublesRoom() {
             <div className="space-y-6">
               <p className="text-base text-gray-900">
                 Our Compact Double Rooms offer comfortable accommodation with a
-                standard 4'6" double bed and private en-suite shower room.
+                standard 4&apos;6&quot; double bed and private en-suite shower
+                room.
               </p>
 
               <p className="text-base text-gray-900">
                 <strong>Room 03</strong> is north facing and is situated on the
-                first floor. It includes a standard 4'6" double bed and en-suite
-                shower room.
+                first floor. It includes a standard 4&apos;6&quot; double bed
+                and en-suite shower room.
               </p>
 
               <p className="text-base text-gray-900">
                 <strong>Room 11</strong> is south facing and is situated on the
-                second floor. It includes a standard 4'6" double bed and
-                en-suite shower room.
+                second floor. It includes a standard 4&apos;6&quot; double bed
+                and en-suite shower room.
               </p>
             </div>
           </div>

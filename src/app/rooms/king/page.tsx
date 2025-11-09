@@ -1,12 +1,17 @@
-import Image from "next/image";
 import KingRoomImage from "@/images/rooms/king.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
+import RoomCarousel from "@/components/RoomCarousel";
 
 export default function KingRoom() {
+  const images = [
+    { src: KingRoomImage, alt: "King Room - Room 2" },
+    { src: KingRoomImage, alt: "King Room - Room 2 (2)" },
+  ];
+
   return (
     <div className="flex flex-col items-center">
-      <Image src={KingRoomImage} alt="King Room - Room 2" className="pb-4" />
+      <RoomCarousel images={images} />
       <Wrapper title="King Room">
         <Sidebar>
           <Facilities />
@@ -17,9 +22,9 @@ export default function KingRoom() {
             <div className="space-y-6">
               <p className="text-base text-gray-900">
                 <strong>Room 04</strong> is a spacious and comfortable south
-                facing king sized double room with a 5' zip and link double bed.
-                Located on the first floor with private en-suite shower room, a
-                seating area and views overlooking Torwood Gardens.
+                facing king sized double room with a 5&apos; zip and link double
+                bed. Located on the first floor with private en-suite shower
+                room, a seating area and views overlooking Torwood Gardens.
               </p>
             </div>
           </div>

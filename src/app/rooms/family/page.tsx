@@ -1,16 +1,17 @@
-import Image from "next/image";
 import FamilyRoomImage from "@/images/rooms/family.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
+import RoomCarousel from "@/components/RoomCarousel";
 
 export default function FamilyRoom() {
+  const images = [
+    { src: FamilyRoomImage, alt: "Family Room - Room 5" },
+    { src: FamilyRoomImage, alt: "Family Room - Room 5 (2)" },
+  ];
+
   return (
     <div className="flex flex-col items-center gap-4">
-      <Image
-        src={FamilyRoomImage}
-        alt="Family Room - Room 5"
-        className="pb-4"
-      />
+      <RoomCarousel images={images} />
 
       <Wrapper title="Room 6: Family Comfort">
         <Sidebar>

@@ -1,12 +1,17 @@
-import Image from "next/image";
 import QueenRoomImage from "@/images/rooms/queen.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
+import RoomCarousel from "@/components/RoomCarousel";
 
 export default function QueenRoom() {
+  const images = [
+    { src: QueenRoomImage, alt: "Queen Room - Room 3" },
+    { src: QueenRoomImage, alt: "Queen Room - Room 3 (2)" },
+  ];
+
   return (
     <div className="flex flex-col items-center">
-      <Image src={QueenRoomImage} alt="Queen Room - Room 3" className="pb-4" />
+      <RoomCarousel images={images} />
       <Wrapper title="Queen Room">
         <Sidebar>
           <Facilities />
