@@ -27,9 +27,9 @@ const navigations: Nav[] = [
     url: "/rooms",
   },
   {
-    name: "attractions",
-    text: "Local Attractions",
-    url: "/attractions",
+    name: "blog",
+    text: "Blog",
+    url: "/blog",
   },
   {
     name: "pets",

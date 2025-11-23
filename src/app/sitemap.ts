@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${baseUrl}/blog`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
-            priority: 0.8,
+            priority: 0.9,
         },
         {
             url: `${baseUrl}/blog/kents-cavern-guide`,
@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${baseUrl}/attractions`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
-            priority: 0.8,
+            priority: 0.6,
         },
         {
             url: `${baseUrl}/contact`,
