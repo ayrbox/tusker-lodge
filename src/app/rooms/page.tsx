@@ -22,32 +22,32 @@ export default function RoomsPage() {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <RoomCard
-          name="Family Room"
-          info="Starting from £50"
+          name="Triple Room with Garden View"
+          info="Spacious Room (Double bed and single bed) and Ensuite"
           image={FamilyRoomImage}
-          href="./rooms/family"
+          href="./rooms/triple"
         />
         <RoomCard
-          name="King Room"
-          info="Starting from £50"
+          name="King Room with Garden View"
+          info="Ensuite Room with Comfy beds and view of Torwood Garden"
           image={KingRoomImage}
           href="./rooms/king"
         />
         <RoomCard
           name="Queen Room"
-          info="Starting from £50"
+          info="Spacious En-Suite Double Room"
           image={QueenRoomImage}
           href="./rooms/queen"
         />
         <RoomCard
           name="Doubles"
-          info="Starting from £50"
+          info="Cozy north-facing double room with en-suite"
           image={DoubleRoomImage}
           href="./rooms/doubles"
         />
         <RoomCard
           name="Singles"
-          info="Starting from £50"
+          info="Compact single room with en-suite"
           image={SingleRoomImage}
           href="./rooms/singles"
         />
