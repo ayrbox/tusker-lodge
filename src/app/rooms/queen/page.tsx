@@ -3,80 +3,139 @@ import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
 import RoomCarousel from "@/components/RoomCarousel";
 
-const facilities = [
-  { key: "no-of-people", text: "Sleeps up to 2 person" },
-  { key: "wifi", text: "Free Wifi" },
-  { key: "flat-screen-tv", text: '50"  Flat Screen TV' },
-  { key: "cable", text: "Cable Television Channels" },
-  { key: "pet-friendly", text: "Pet Friendly" },
-  { key: "tea-and-coffee", text: "Tea and Coffee" },
-  { key: "hair-dryer", text: "Hair Dryer" },
-  { key: "no-smoking", text: "No Smoking" },
-  { key: "complimentary-toiletries", text: "Complimentary Toiletries" },
-  { key: "daily-housekeeping", text: "Daily Housekeeping" },
-  { key: "ironing-board", text: "Iron and Ironing Board (On request)" },
-  { key: "kettle", text: "Kettle" },
-  { key: "linen-towels", text: "Linen & Towels Supplied" },
-  { key: "ensuit-shower", text: "Shower EnSuite" },
-  { key: "bottle-water", text: "Bottled Water" },
-];
-
 export default function QueenRoom() {
   const images = [
-    { src: QueenRoomImage, alt: "Queen Room - Room 3" },
-    { src: QueenRoomImage, alt: "Queen Room - Room 3 (2)" },
+    {
+      src: QueenRoomImage,
+      alt: "Luxury Queen Room 07 - Super King Double Bed at Tusker Lodge Torquay",
+    },
+    {
+      src: QueenRoomImage,
+      alt: "Queen Room 07 En-Suite - Premium Accommodation in Torquay, Devon",
+    },
   ];
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "HotelRoom",
+    name: "Queen Room - Super King Double Bed",
+    description:
+      "Spacious super king sized double room with modern amenities and en-suite facilities at Tusker Lodge Torquay",
+    occupancy: {
+      "@type": "QuantitativeValue",
+      minValue: 1,
+      maxValue: 2,
+    },
+    bed: {
+      "@type": "BedDetails",
+      name: "Super King Double Bed (6 foot)",
+      quantity: 1,
+    },
+    amenityFeature: [
+      { "@type": "Text", name: "Free WiFi" },
+      { "@type": "Text", name: "50 inch Flat Screen TV" },
+      { "@type": "Text", name: "Pet Friendly" },
+      { "@type": "Text", name: "Tea and Coffee Facilities" },
+      { "@type": "Text", name: "Hair Dryer" },
+      { "@type": "Text", name: "En-Suite Shower Room" },
+      { "@type": "Text", name: "Complimentary Toiletries" },
+    ],
+    image: QueenRoomImage.src,
+  };
 
   return (
     <div className="flex flex-col items-center">
-      <Wrapper title="Queen Room">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <RoomCarousel images={images} />
+      <Wrapper title="Luxury Queen Room with Super King Double Accommodation">
         <Sidebar>
-          <Facilities facilities={facilities} />
+          <Facilities />
         </Sidebar>
         <Content>
-          <p className="text-gray-500 text-3xl py-2">
-            Spacious En-Suite Double Room - Room 07
-          </p>
-          <div>
-            <h3 className="sr-only">Description</h3>
-            <div className="space-y-6">
-              <p className="text-base text-gray-500">
-                Escape to the comfort of Room 07, our generously proportioned
-                super king-sized double room that combines classic elegance with
-                modern amenities. Located on the first floor of Tusker Lodge,
-                this bright and airy accommodation offers the perfect sanctuary
-                for couples seeking a peaceful getaway on the English Riviera.
-              </p>
-              <p className="sr-only">
-                <strong>Room 07</strong> is our super king sized double room, a
-                spacious north facing, first floor en-suite with a 6&apos;
-                double bed. Tea and coffee making facilities with complimentary
-                bottled water. It features an en-suite shower room with free
-                toiletries.
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                Overview
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <strong>Queen Room</strong> <em>(Room 7)</em> is our premier
+                super king sized double room, a spacious north-facing,
+                first-floor en-suite accommodation with a luxurious 6&apos;
+                double bed. This premium room at our Torquay bed and breakfast
+                features tea and coffee making facilities with complimentary
+                bottled water. It boasts an en-suite shower room with
+                high-quality complimentary toiletries.
               </p>
             </div>
-          </div>
-          <div className="mt-8">
-            <RoomCarousel images={images} />
-          </div>
-          <div>
-            <h3 className="text-2xl">Sleep in Comfort</h3>
-            <p className="text-gray-900">
-              At the heart of this spacious room lies a sumptuous 6-foot super
-              king-sized double bed, dressed in crisp, high-quality linens and
-              plump pillows to ensure you drift off into a restful night's
-              sleep. Whether you're recovering from a day exploring Torquay's
-              stunning coastline or simply enjoying a leisurely morning lie-in,
-              our premium mattress guarantees the ultimate comfort experience.
-            </p>
-          </div>
 
-          <div className="mt-10">
-            <h2 className="text-sm font-medium text-gray-900">Breakfast</h2>
-            <div className="mt-4 space-y-6">
-              <p className="text-sm text-gray-600">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                Amenities &amp; Features
+              </h2>
+              <ul
+                role="list"
+                className="list-disc space-y-3 pl-6 text-lg md:text-xl text-gray-700"
+              >
+                <li className="text-gray-700">
+                  <span className="font-medium">Sleeps up to 2 guests</span> -
+                  Perfect for couples
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">50&ldquo; Flat Screen TV</span>{" "}
+                  - Premium entertainment
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">Free WiFi</span> - Stay
+                  connected during your stay
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">Pet Friendly</span> - Bring your
+                  furry companion
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">Tea and Coffee Facilities</span>{" "}
+                  - Start your day right
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">Hair Dryer</span> - Essential
+                  amenities provided
+                </li>
+                <li className="text-gray-700">
+                  <span className="font-medium">Complimentary Toiletries</span>{" "}
+                  - Premium quality products
+                </li>
+                <li className="text-gray-700">
+                  Private facilities
+                  <span className="font-medium">En-Suite Shower Room</span> -
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                Breakfast & Dining
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Start your day right with our delicious breakfast, an optional
-                extra at just £10 per person per day.
+                extra at just £10 per person per day. Our carefully prepared
+                breakfast options ensure you&apos;re energized for exploring
+                Torquay and the English Riviera.
+              </p>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8">
+              <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-2">
+                Why Choose Our Queen Room?
+              </h3>
+              <p className="text-lg text-blue-800 leading-relaxed">
+                Perfect for couples seeking luxury accommodation in Torquay, our
+                super king double room combines elegance with modern comfort.
+                Located at Tusker Lodge, a pet-friendly bed and breakfast in
+                Devon, this spacious room offers the ideal retreat for your
+                English Riviera getaway.
               </p>
             </div>
           </div>
