@@ -89,16 +89,18 @@ export default function DoublesRoom() {
               </h2>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
                 Enjoy a cozy stay in our <strong>Economy Double Room</strong>, a
-                compact 86 ft² space located on the first floor. This north-facing
-                room features a comfortable double bed and comes complete with an
-                en suite shower room, making it an ideal choice for couples or
-                solo travelers seeking value without compromising on comfort.
+                compact 86 ft² space located on the first floor. This
+                north-facing room features a comfortable double bed and comes
+                complete with an en suite shower room, making it an ideal choice
+                for couples or solo travelers seeking value without compromising
+                on comfort.
               </p>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 The room is well-appointed with essential amenities including a
-                flat-screen TV, tea and coffee making facilities, and complimentary
-                toiletries. Our guests love the comfort of our beds, giving them an
-                impressive <strong>8.8 rating</strong> based on 89 reviews.
+                flat-screen TV, tea and coffee making facilities, and
+                complimentary toiletries. Our guests love the comfort of our
+                beds, giving them an impressive <strong>8.8 rating</strong>{" "}
+                based on 89 reviews.
               </p>
             </div>
 
@@ -123,12 +125,12 @@ export default function DoublesRoom() {
                   shower, toilet, and towels
                 </li>
                 <li className="text-gray-700">
-                  <span className="font-medium">Free Toiletries</span> - Shampoo,
-                  body soap provided
+                  <span className="font-medium">Free Toiletries</span> -
+                  Shampoo, body soap provided
                 </li>
                 <li className="text-gray-700">
-                  <span className="font-medium">Entertainment</span> - Flat-screen
-                  TV and Free WiFi
+                  <span className="font-medium">Entertainment</span> -
+                  Flat-screen TV and Free WiFi
                 </li>
                 <li className="text-gray-700">
                   <span className="font-medium">Convenience</span> - Electric
@@ -143,8 +145,8 @@ export default function DoublesRoom() {
                   area, wardrobe/closet
                 </li>
                 <li className="text-gray-700">
-                  <span className="font-medium">Other Amenities</span> - Hairdryer,
-                  iron, wake-up service/alarm clock
+                  <span className="font-medium">Other Amenities</span> -
+                  Hairdryer, iron, wake-up service/alarm clock
                 </li>
                 <li className="text-gray-700">
                   <span className="font-medium">Access</span> - Upper floors
@@ -164,9 +166,9 @@ export default function DoublesRoom() {
                 <strong>Comfy beds, 8.8 – Based on 89 reviews</strong>
               </p>
               <p className="text-lg text-amber-800 leading-relaxed">
-                "This first-floor compact room comes with toiletries, an en suite
-                shower room and tea and coffee making facilities. This room type is
-                north facing."
+                This first-floor compact room comes with toiletries, an en suite
+                shower room and tea and coffee making facilities. This room type
+                is north facing.
               </p>
             </div>
 
