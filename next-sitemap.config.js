@@ -3,7 +3,7 @@ module.exports = {
   siteUrl: process.env.SITE_URL || "https://tuskerlodge.co.uk",
   generateRobotsTxt: false, // We already have a custom robots.txt
   generateIndexSitemap: false, // Single sitemap for small sites
-  outDir: "./public", // Output directory for sitemap files
+  outDir: "./out", // Output directory for sitemap files
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
