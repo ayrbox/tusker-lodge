@@ -1,5 +1,5 @@
 import RoomCard from "@/components/RoomCard";
-import FamilyRoomImage from "@/images/rooms/family.jpg";
+import TripleRoomImage from "@/images/rooms/room-03-01.jpg";
 import KingRoomImage from "@/images/rooms/king.jpg";
 import QueenRoomImage from "@/images/rooms/queen.jpg";
 import DoubleRoomImage from "@/images/rooms/doubles.jpg";
@@ -24,7 +24,7 @@ export default function RoomsPage() {
         <RoomCard
           name="Triple Room with Garden View"
           info="Spacious Room (Double bed and single bed) and Ensuite"
-          image={FamilyRoomImage}
+          image={TripleRoomImage}
           href="./rooms/triple"
         />
         <RoomCard

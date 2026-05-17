@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import KingRoomImage from "@/images/rooms/king.jpg";
-import FamilyRoomImage from "@/images/rooms/family.jpg";
+import TripleRoomImage from "@/images/rooms/room-03-03.jpg";
 import DoubleRoomImage from "@/images/rooms/doubles.jpg";
 import SingleRoomImage from "@/images/rooms/singles.jpg";
 import Link from "next/link";
@@ -39,8 +39,8 @@ const Room = (props: RoomProps) => {
 
 const roomsInfo: RoomProps[] = [
   {
-    name: "Family Room",
-    image: FamilyRoomImage,
+    name: "Triple Room",
+    image: TripleRoomImage,
     href: "./rooms/family",
   },
   {
