@@ -1,16 +1,28 @@
-import FamilyRoomImage from "@/images/rooms/family.jpg";
 import Facilities from "@/app/rooms/Facilities";
 import Wrapper, { Sidebar, Content } from "@/app/rooms/Wrapper";
 import RoomCarousel from "@/components/RoomCarousel";
 
+import Image01 from "@/images/rooms/room-03-01.jpg";
+import Image02 from "@/images/rooms/room-03-02.jpg";
+import Image03 from "@/images/rooms/room-03-03.jpg";
+import Image04 from "@/images/rooms/room-03-04.jpg";
+
 export default function FamilyRoom() {
   const images = [
     {
-      src: FamilyRoomImage,
+      src: Image01,
       alt: "Triple Room with Garden View - 102 ft² Accommodation at Tusker Lodge Torquay",
     },
     {
-      src: FamilyRoomImage,
+      src: Image02,
+      alt: "Triple Room with Walk-in Shower - Premium Family Accommodation in Torquay, Devon",
+    },
+    {
+      src: Image03,
+      alt: "Triple Room with Walk-in Shower - Premium Family Accommodation in Torquay, Devon",
+    },
+    {
+      src: Image04,
       alt: "Triple Room with Walk-in Shower - Premium Family Accommodation in Torquay, Devon",
     },
   ];
@@ -69,7 +81,7 @@ export default function FamilyRoom() {
       worstRating: "1",
       ratingExplanation: "Based on 89 reviews for comfortable beds",
     },
-    image: FamilyRoomImage.src,
+    image: Image03.src,
   };
 
   return (
