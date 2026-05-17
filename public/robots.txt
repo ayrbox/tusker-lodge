@@ -1,0 +1,11 @@
+# robots.txt for tuskerlodge.co.uk
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Crawl-delay to be respectful to the server
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://tuskerlodge.co.uk/sitemap.xml
