@@ -74,7 +74,7 @@ export default function Footer() {
               <NavItem text="Zutto Sushi" url="/pets" />
             </li>
             <li>
-              <NavItem text="Terms &amp; Condition" url="/rooms" />
+              <NavItem text="Terms &amp; Condition" url="/terms" />
             </li>
             <li>
               <NavItem text="Privacy Policy" url="/attractions" />
