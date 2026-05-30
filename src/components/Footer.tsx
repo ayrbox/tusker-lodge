@@ -77,7 +77,7 @@ export default function Footer() {
               <NavItem text="Terms &amp; Condition" url="/terms" />
             </li>
             <li>
-              <NavItem text="Privacy Policy" url="/attractions" />
+              <NavItem text="Privacy Policy" url="/privacy" />
             </li>
           </ol>
         </div>
