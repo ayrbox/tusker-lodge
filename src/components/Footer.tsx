@@ -31,10 +31,7 @@ export default function Footer() {
         <div>
           <FooterHeading>Socials</FooterHeading>
           <div className="flex gap-4">
-            <a
-              href="https://www.facebook.com/TuskerLodgeHotel"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/TuskerLodgeHotel" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7"
