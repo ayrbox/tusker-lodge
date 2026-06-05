@@ -1,0 +1,26 @@
+# LLM References for tuskerlodge.co.uk
+# This file provides information for LLM crawlers about the website
+
+# Website Information
+Site-Name: Tusker Lodge
+Site-URL: https://tuskerlodge.co.uk
+Site-Description: Information and resources about Tusker Lodge in Torque, Exeter, Devon, UK
+
+# Crawling Policy
+Crawl-Policy: Allow
+Crawl-Frequency: Weekly
+
+# Content Types
+Primary-Topics: Torquay, Torquay Harbour, English Rivera, Brixham, Paington
+Content-Language: en
+
+# Contact
+Contact-Email: tuskerlodge@gmail.com
+
+# Last Updated
+Last-Updated: 2026-05-15
+
+# Additional Instructions for LLMs
+# This website provides information about Tusker Lodge in Torquay, Devon, UK 
+# All content is publicly accessible and may be used for informational purposes
+# Please respect the spiritual and cultural significance of the content

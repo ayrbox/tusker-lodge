@@ -1,7 +1,8 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const rooms = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/rooms" }),
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
@@ -28,7 +29,7 @@ const rooms = defineCollection({
 });
 
 const policies = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/policies" }),
   schema: z.object({
     title: z.string(),
     lastUpdated: z.string(),
@@ -36,13 +37,12 @@ const policies = defineCollection({
 });
 
 const attractions = defineCollection({
-  type: 'content',
-  schema: ({ image }) => z.object({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/attractions" }),
+  schema: z.object({
     name: z.string(),
     category: z.string(),
     description: z.string().optional(),
     link: z.string(),
-    image: image().optional(),
   }),
 });
 
