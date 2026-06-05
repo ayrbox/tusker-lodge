@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import Wrapper, { Sidebar, Content as RoomContent } from "@/app/rooms/Wrapper";
+import Facilities from "@/app/rooms/Facilities";
+
+export async function getStaticPaths() {
+  const roomEntries = await getCollection('rooms');
+  return roomEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <div class="flex flex-col items-center">
+    <Wrapper title={entry.data.title}>
+      <Sidebar>
+        <Facilities />
+      </Sidebar>
+      <RoomContent>
+        <div class="space-y-8">
+           <Content />
+        </div>
+      </RoomContent>
+    </Wrapper>
+  </div>
+</Layout>

@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 
 export const BookingCTA = ({
   href = "",
@@ -12,7 +11,7 @@ export const BookingCTA = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <Link
+  <a
     href={href}
     target="_blank"
     className={clsx(
@@ -27,5 +26,5 @@ export const BookingCTA = ({
     )}
   >
     {children}
-  </Link>
+  </a>
 );

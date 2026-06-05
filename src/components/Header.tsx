@@ -1,11 +1,8 @@
-"use client";
 import { useState } from "react";
 import NavItem from "./NavItem";
-import Image from "next/image";
 
 import LogoImage from "@/images/logo.jpg";
 import { PhoneCallIcon, MenuIcon, XIcon } from "lucide-react";
-import Link from "next/link";
 import clsx from "clsx";
 import { BookingCTA } from "./BookingCTA";
 
@@ -59,14 +56,14 @@ export default function Header() {
   return (
     <div className="p-8">
       <div className="container mx-auto py-3 flex justify-between items-center">
-        <Link href="/">
-          <Image
-            src={LogoImage}
+        <a href="/">
+          <img
+            src={LogoImage.src}
             alt="Tusker Lodge Logo"
             width={200}
             height={60}
           />
-        </Link>
+        </a>
 
         {/* Desktop horizontal menu */}
         <ol className="hidden xl:flex align-items gap-6">
@@ -92,13 +89,13 @@ export default function Header() {
           </div>
 
           <BookingCTA
-            href={process.env.NEXT_PUBLIC_BOOKING_DIRECTLY}
+            href={import.meta.env.PUBLIC_BOOKING_DIRECTLY}
             className="hidden md:block"
           >
             Book Directly
           </BookingCTA>
           <BookingCTA
-            href={process.env.NEXT_PUBLIC_BOOKING_DOT_COM}
+            href={import.meta.env.PUBLIC_BOOKING_DOT_COM}
             variant="booking"
             className="hidden md:block"
           >
@@ -136,8 +133,8 @@ export default function Header() {
           <div className="flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <Image
-                src={LogoImage}
+              <img
+                src={LogoImage.src}
                 alt="Tusker Lodge Logo"
                 width={200}
                 height={60}
@@ -156,13 +153,13 @@ export default function Header() {
               <ol className="space-y-4">
                 {navigations.map((n) => (
                   <li key={n.name}>
-                    <Link
+                    <a
                       href={n.url}
                       className="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
                       onClick={handleMenuToggle(false)}
                     >
                       {n.text}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ol>
@@ -183,11 +180,11 @@ export default function Header() {
                   </div>
                 </div>
 
-                <BookingCTA href={process.env.NEXT_PUBLIC_BOOKING_DIRECTLY}>
+                <BookingCTA href={import.meta.env.PUBLIC_BOOKING_DIRECTLY}>
                   Book Directly
                 </BookingCTA>
                 <BookingCTA
-                  href={process.env.NEXT_PUBLIC_BOOKING_DOT_COM}
+                  href={import.meta.env.PUBLIC_BOOKING_DOT_COM}
                   variant="booking"
                 >
                   Booking.com

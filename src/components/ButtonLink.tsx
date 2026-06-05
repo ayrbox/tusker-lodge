@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
 
@@ -10,7 +9,7 @@ export type ButtonLinkProps = {
 
 export default function ButtonLink(props: ButtonLinkProps) {
   return (
-    <Link
+    <a
       href={props.href}
       title="Check Availability in 'booking-directly.com'"
       target="_blank"
@@ -20,6 +19,6 @@ export default function ButtonLink(props: ButtonLinkProps) {
       )}
     >
       {props.children}
-    </Link>
+    </a>
   );
 }
