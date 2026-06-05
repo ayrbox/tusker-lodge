@@ -1,6 +1,5 @@
 import { ArrowRightIcon } from "lucide-react";
 import ZuttoSushiImage from "@/images/zutto-sushi.jpg";
-import Link from "next/link";
 
 export default function ZuttoSushi() {
   return (
@@ -19,7 +18,7 @@ export default function ZuttoSushi() {
           Experience Zutto Sushi from our Chef.
         </p>
         <div className="flex justify-center">
-          <Link
+          <a
             href="https://www.zuttosushi.co.uk/"
             target="_blank"
             className="text-gray-100 rounded-full border-transparent bg-[#009ffd] px-8 py-3 text-base font-medium hover:bg-[#ffa400] focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
@@ -28,7 +27,7 @@ export default function ZuttoSushi() {
               Learn Now
               <ArrowRightIcon />
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

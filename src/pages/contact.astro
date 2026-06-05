@@ -1,0 +1,40 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { MapPin, Phone, Mail } from "lucide-react";
+---
+
+<Layout title="Contact | Tusker Lodge">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-2">Contact Us</h1>
+    <p class="text-sm mb-8 text-gray-500">
+      You can call us, email us or visit us directly.
+    </p>
+    
+    <div class="space-y-8">
+      <div class="flex gap-4">
+        <MapPin class="text-indigo-600" />
+        <address class="not-italic text-gray-700">
+          Tusker Lodge<br />
+          533 Babbacombe Road<br />
+          Torquay,<br />
+          Devon<br />
+          TQ1 1HQ
+        </address>
+      </div>
+
+      <div class="flex gap-4">
+        <Phone class="text-indigo-600" />
+        <p class="text-gray-700">01803 292668</p>
+      </div>
+
+      <div class="flex gap-4">
+        <Mail class="text-indigo-600" />
+        <p>
+          <a href="mailto:info@tuskerlodge.co.uk" class="text-indigo-600 hover:underline">
+            info@tuskerlodge.co.uk
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

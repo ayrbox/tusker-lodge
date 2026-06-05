@@ -1,13 +1,11 @@
-import Image, { StaticImageData } from "next/image";
 import KingRoomImage from "@/images/rooms/king.jpg";
 import TripleRoomImage from "@/images/rooms/room-03-03.jpg";
 import DoubleRoomImage from "@/images/rooms/doubles.jpg";
 import SingleRoomImage from "@/images/rooms/singles.jpg";
-import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
 export type RoomProps = {
-  image: StaticImageData;
+  image: { src: string };
   name: string;
   href: string;
 };
@@ -16,9 +14,9 @@ const Room = (props: RoomProps) => {
   return (
     <div className="relative group text-white">
       <div aria-hidden="true" className="absolute inset-0">
-        <Image
+        <img
           className="object-cover h-full w-full"
-          src={props.image}
+          src={props.image.src}
           alt={props.name}
         />
       </div>
@@ -26,11 +24,11 @@ const Room = (props: RoomProps) => {
       <div className="absolute inset-0 p-4 flex items-end">
         <div>
           <h3 className="text-xl font-bold">{props.name}</h3>
-          <Link className="flex" href={props.href}>
+          <a className="flex" href={props.href}>
             <span className="absolute inset-0"></span>
             <span>View</span>
             <ArrowRightIcon className="transition-all group-hover:translate-x-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -72,10 +70,10 @@ export default function Rooms() {
             reasonable prices. Simple, comfortable, and everything you need for
             a relaxing stay.
           </p>
-          <Link className="flex" href="./rooms">
+          <a className="flex" href="./rooms">
             <span>Find more </span>
             <ArrowRightIcon />
-          </Link>
+          </a>
         </div>
       </div>
       <div className="xl:w-1/2 grid md:grid-cols-2 h-dvh xl:h-[32rem]">

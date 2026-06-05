@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HarbourImage from "@/images/hero-banner.jpg";
 import BG from "@/images/bg/featured_bg.jpg";
 
@@ -12,9 +11,9 @@ export default function Featured() {
     >
       <div className="container mx-auto mb-16 py-8 flex flex-col xl:flex-row">
         <div className="p-8 xl:w-1/2">
-          <Image
+          <img
             className="rounded rounded-lg shadow-md h-full object-cover"
-            src={HarbourImage}
+            src={HarbourImage.src}
             alt="Torquay Harbour"
           />
         </div>
