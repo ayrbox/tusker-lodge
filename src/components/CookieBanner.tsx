@@ -29,7 +29,7 @@ export default function CookieBanner() {
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 30);
     document.cookie = `cookie_accepted=true; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
-    
+
     setIsVisible(false);
     setTimeout(() => setIsAccepted(true), 500); // Wait for transition
   };
@@ -38,13 +38,12 @@ export default function CookieBanner() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 p-4 bg-black text-white transition-transform duration-500 ease-in-out ${
-        isVisible ? "translate-y-0" : "translate-y-full"
-      }`}
+      className={`fixed bottom-0 left-0 right-0 z-50 p-4 bg-black text-white transition-transform duration-500 ease-in-out ${isVisible ? "translate-y-0" : "translate-y-full"
+        }`}
     >
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm">
-          We use cookies to ensure you get the best experience on our website. 
+          We use cookies to ensure you get the best experience on our website.
           By continuing to use this site, you agree to our use of cookies.
         </p>
         <div className="flex items-center gap-4">
