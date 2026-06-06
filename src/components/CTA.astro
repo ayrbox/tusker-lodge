@@ -1,0 +1,18 @@
+---
+type CTAProps = {
+  href: string;
+  variant: "default" | "booking",
+}
+
+const { href, variant = "default"} = Astro.props as CTAProps;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class="
+  border rounded-full border border-transparent px-8 py-3 text-base font-medium text-white focus:ring-2
+  focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden shadow bg-[#ffa400] hover:bg-[#009ffd]"
+>
+  <slot /> 
+</a>

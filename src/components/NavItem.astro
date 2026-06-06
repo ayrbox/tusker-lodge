@@ -1,0 +1,11 @@
+---
+type NavItemProps = {
+  url: string; 
+}
+
+const { url } = Astro.props as NavItemProps;
+---
+
+<a href={url} className="hover:text-blue-500">
+  <slot />
+</a>
