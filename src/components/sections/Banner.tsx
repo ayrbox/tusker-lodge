@@ -1,5 +1,3 @@
-import TorquayBannerImage from "@/images/torquay-banner.jpg";
-
 export type BannerProps = {
   title: string;
   path: string;
@@ -10,7 +8,7 @@ export default function Banner(props: BannerProps) {
     <section
       className="relative bg-cover bg-no-repeat bg-center "
       style={{
-        backgroundImage: `url(${TorquayBannerImage.src})`,
+        backgroundImage: `url(images/torquay-banner.jpg)`,
       }}
     >
       <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
