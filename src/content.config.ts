@@ -2,6 +2,30 @@ import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 import { glob, file } from "astro/loaders";
 
+const rooms = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/rooms" }),
+  schema: z.object({
+    title: z.string(),
+    images: z.array(z.object({ src: z.string(), alt: z.string() })),
+    capacity: z.object({
+      min: z.number(),
+      max: z.number(),
+    }),
+    beds: z.array(
+      z.object({
+        type: z.string(),
+        quantity: z.number(),
+      })
+    ),
+    amenities: z.array(z.string()),
+    rating: z.object({
+      value: z.number(),
+      count: z.number(),
+      label: z.string(),
+    }),
+  }),
+});
+
 const attractions = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/attractions" }),
   schema: z.object({
@@ -23,6 +47,7 @@ const testimonials = defineCollection({
 });
 
 export const collections = {
+  rooms,
   attractions,
   testimonials,
 };

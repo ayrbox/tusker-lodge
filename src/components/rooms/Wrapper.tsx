@@ -22,7 +22,7 @@ function Sidebar(props: { children: React.ReactNode }) {
 
 function Content(props: { children: React.ReactNode }) {
   return (
-    <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16">
+    <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16 prose prose-slate">
       {props.children}
     </div>
   );
