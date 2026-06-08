@@ -1,5 +1,5 @@
 ---
-import { ArrowRightIcon } from "lucide-react";
+import { Icon } from "astro-icon/components";
 
 export type RoomProps = {
   image: { src: string };
@@ -41,9 +41,12 @@ const roomsInfo: RoomProps[] = [
         reasonable prices. Simple, comfortable, and everything you need for
         a relaxing stay.
       </p>
-      <a class="flex" href="./rooms">
+      <a class="flex group" href="./rooms">
         <span>Find more </span>
-        <ArrowRightIcon />
+
+        <span class="transition-all group-hover:translate-x-4">
+          <Icon name="arrow-right" size="1.5em" />
+        </span>
       </a>
     </div>
   </div>
@@ -64,7 +67,9 @@ const roomsInfo: RoomProps[] = [
             <a class="flex" href={r.href}>
               <span class="absolute inset-0"></span>
               <span>View</span>
-              <span class="transition-all group-hover:translate-x-4">Arrow Right Icon</span>
+              <span class="transition-all group-hover:translate-x-4">
+                <Icon name="arrow-right" size="1.5em" />
+              </span>
             </a>
           </div>
         </div>
