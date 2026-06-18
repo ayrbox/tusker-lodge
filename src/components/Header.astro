@@ -1,8 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components'
-import clsx from "clsx"
-import CTA from "./CTA.astro"
-import NavItem from "./NavItem.astro"
+import { externalLinks } from "@/data/externalLinks";
+import { Icon } from "astro-icon/components";
+import clsx from "clsx";
+import CTA from "./CTA.astro";
+import NavItem from "./NavItem.astro";
 
 type Nav = {
   name: string;
@@ -45,28 +46,28 @@ const navigations: Nav[] = [
 
 const menu = false;
 ---
+
 <div class="p-8">
   <div class="container mx-auto py-3 flex justify-between items-center">
     <a href="/">
-      <img
-        src="/logo.jpg"
-        alt="Tusker Lodge Logo"
-        width={200}
-        height={60}
-      />
+      <img src="/logo.jpg" alt="Tusker Lodge Logo" width={200} height={60} />
     </a>
 
     {/* Desktop horizontal menu */}
     <ol class="hidden xl:flex align-items gap-6">
-      {navigations.map((n) => (
-        <li key={n.name}>
-          <NavItem text={n.text} url={n.url} />
-        </li>
-      ))}
+      {
+        navigations.map((n) => (
+          <li>
+            <NavItem text={n.text} url={n.url} />
+          </li>
+        ))
+      }
     </ol>
 
     <div class="flex items-center content-center gap-x-2">
-      <div class="hidden relative xl:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700 mr-4">
+      <div
+        class="hidden relative xl:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700 mr-4"
+      >
         <div class="p-3 row-span-2 rounded-full bg-orange-500">
           <Icon name="phone" class="text-white" size="1.5em" />
         </div>
@@ -79,26 +80,24 @@ const menu = false;
         </p>
       </div>
 
-      <CTA
-        href={import.meta.env.PUBLIC_BOOKING_DIRECTLY}
-        class="hidden md:block"
-      >
+      <CTA href={externalLinks.bookingDirectly} class="hidden md:block">
         Book Directly
       </CTA>
       <CTA
-        href={import.meta.env.PUBLIC_BOOKING_DOT_COM}
+        href={externalLinks.bookingDotCom}
         variant="booking"
         class="hidden md:block"
       >
         Booking.com
       </CTA>
 
-      {/* Mobile burger menu button */}
       <button
         class="block xl:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
         aria-label="Open menu"
       >
-        <span class="h-6 w-6">Burger menu was here</span>
+        <span class="h-6 w-6">
+          <Icon name="burger-menu" size="1.5em" />
+        </span>
       </button>
     </div>
 
@@ -109,7 +108,8 @@ const menu = false;
         menu ? "opacity-100" : "opacity-0 pointer-events-none",
       )}
       role="button"
-    ></div>
+    >
+    </div>
 
     {/* Sidebar menu */}
     <aside
@@ -121,7 +121,9 @@ const menu = false;
     >
       <div class="flex flex-col h-full">
         {/* Header */}
-        <div class="flex items-center justify-between p-4 border-b border-gray-200">
+        <div
+          class="flex items-center justify-between p-4 border-b border-gray-200"
+        >
           <img
             src="/logo.jpg"
             alt="Tusker Lodge Logo"
@@ -139,16 +141,18 @@ const menu = false;
         {/* Navigation */}
         <nav class="flex-1 px-4 py-6">
           <ol class="space-y-4">
-            {navigations.map((n) => (
-              <li key={n.name}>
-                <a
-                  href={n.url}
-                  class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
-                >
-                  {n.text}
-                </a>
-              </li>
-            ))}
+            {
+              navigations.map((n) => (
+                <li>
+                  <a
+                    href={n.url}
+                    class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
+                  >
+                    {n.text}
+                  </a>
+                </li>
+              ))
+            }
           </ol>
         </nav>
 
@@ -167,13 +171,8 @@ const menu = false;
               </div>
             </div>
 
-            <CTA href={import.meta.env.PUBLIC_BOOKING_DIRECTLY}>
-              Book Directly
-            </CTA>
-            <CTA
-              href={import.meta.env.PUBLIC_BOOKING_DOT_COM}
-              variant="booking"
-            >
+            <CTA href={externalLinks.bookingDirectly}> Book Directly </CTA>
+            <CTA href={externalLinks.bookingDotCom} variant="booking">
               Booking.com
             </CTA>
           </div>

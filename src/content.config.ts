@@ -15,7 +15,7 @@ const rooms = defineCollection({
       z.object({
         type: z.string(),
         quantity: z.number(),
-      })
+      }),
     ),
     amenities: z.array(z.string()),
     rating: z.object({
@@ -45,6 +45,8 @@ const testimonials = defineCollection({
     source: z.string(), // may be enum
   }),
 });
+
+
 
 export const collections = {
   rooms,
