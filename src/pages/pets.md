@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/Policies.astro"
+layout: "@/layouts/PageLayout.astro"
 title: "Pets"
 lastUpdated: "May 30, 2026"
 ---
