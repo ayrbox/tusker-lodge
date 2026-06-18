@@ -46,8 +46,6 @@ const testimonials = defineCollection({
   }),
 });
 
-
-
 export const collections = {
   rooms,
   attractions,
