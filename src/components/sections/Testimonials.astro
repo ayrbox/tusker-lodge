@@ -1,26 +1,26 @@
 ---
-import { getCollection } from 'astro:content';
-const testimonials = await getCollection('testimonials');
+import TestimonialCard from "@/components/TestimonialCard.astro";
+import { getCollection } from "astro:content";
+const testimonials = await getCollection("testimonials");
 ---
+
 <section class="py-32">
   <div class="container mx-auto flex flex-col gap-6 items-center text-center">
-    <h1 class="text-lg text-gray-500 font-bold">Testimonials</h1>
-    <div
-      class="w-full p-8 xl:w-2/3 cursor-grab active:cursor-grabbing select-none text-lg text-gray-800"
-    >
+    <h2 class="text-3xl text-primary font-bold mb-10">Testimonials</h2>
 
-    {testimonials.map(t => (
-      <div class="text-2xl font-bold my-3">
-        {t.data.title}
-      </div>
-      <p class="text-lg transition-opacity duration-500">
-        &quot;{t.data.text}&quot;
-      </p>
-      <div class="transition-opacity duration-500 mt-6">
-        <p class="font-bold">{t.data.name}</p>
-        <p class="text-sm -mt-1">{t.data.source}</p>
-      </div>
-    ))}
-    </div>
+    <ul class="flex flex-col gap-6">
+      {
+        testimonials.map((t) => (
+          <li class="xl:odd:translate-x-80">
+            <TestimonialCard
+              title={t.data.title}
+              text={t.data.text}
+              name={t.data.name}
+              source={t.data.source}
+            />
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>

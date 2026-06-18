@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  name: string;
+  source: string;
+}
+
+const { title, text, name, source } = Astro.props;
+---
+
+<article
+  class="bg-white border border-gray-200 rounded-xl p-10 shadow-lg xl:w-[80%]"
+>
+  <div class="flex items-start gap-10">
+    <div
+      aria-hidden="true"
+      class="hidden md:flex flex-shrink-0 w-20 h-20 rounded-full bg-gray-100 border border-gray-200 items-center justify-center text-gray-400"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-10 h-10"
+      >
+        <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path>
+        <path d="M12 14c-5.33 0-8 2.67-8 4v1h16v-1c0-1.33-2.67-4-8-4Z"></path>
+      </svg>
+    </div>
+    <div class="flex-1 min-w-0">
+      <figure>
+        <blockquote
+          class="relative mb-5 text-lg before:content-['“'] before:absolute before:-top-10 before:-left-4 before:text-9xl before:text-slate-200 before:font-serif before:leading-none before:align-[-0.4em]"
+        >
+          <em class="relative">{text}</em>
+        </blockquote>
+        <figcaption class="flex flex-col">
+          <strong class="block font-bold text-gray-900">{name}</strong>
+          <span class="block text-gray-500">{source}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
