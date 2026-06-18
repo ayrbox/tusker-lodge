@@ -1,7 +1,6 @@
 ---
 import { externalLinks } from "@/data/externalLinks";
 import { Icon } from "astro-icon/components";
-import clsx from "clsx";
 import CTA from "./CTA.astro";
 import NavItem from "./NavItem.astro";
 
@@ -12,39 +11,13 @@ type Nav = {
 };
 
 const navigations: Nav[] = [
-  {
-    name: "home",
-    text: "Home",
-    url: "/",
-  },
-  {
-    name: "our-rooms",
-    text: "Rooms",
-    url: "/rooms",
-  },
-  {
-    name: "attractions",
-    text: "Attractions",
-    url: "/attractions",
-  },
-  {
-    name: "pets",
-    text: "Pets",
-    url: "/pets",
-  },
-  {
-    name: "parking",
-    text: "Parking",
-    url: "/parking",
-  },
-  {
-    name: "contact",
-    text: "Contact",
-    url: "/contact",
-  },
+  { name: "home", text: "Home", url: "/" },
+  { name: "our-rooms", text: "Rooms", url: "/rooms" },
+  { name: "attractions", text: "Attractions", url: "/attractions" },
+  { name: "pets", text: "Pets", url: "/pets" },
+  { name: "parking", text: "Parking", url: "/parking" },
+  { name: "contact", text: "Contact", url: "/contact" },
 ];
-
-const menu = false;
 ---
 
 <div class="p-8">
@@ -54,17 +27,18 @@ const menu = false;
     </a>
 
     {/* Desktop horizontal menu */}
-    <ol class="hidden xl:flex align-items gap-6">
+    <ol class="hidden xl:flex items-center gap-6">
       {
         navigations.map((n) => (
           <li>
-            <NavItem text={n.text} url={n.url} />
+            <NavItem url={n.url}>{n.text}</NavItem>
           </li>
         ))
       }
     </ol>
 
     <div class="flex items-center content-center gap-x-2">
+      {/* Desktop call us */}
       <div
         class="hidden relative xl:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700 mr-4"
       >
@@ -80,102 +54,131 @@ const menu = false;
         </p>
       </div>
 
-      <CTA href={externalLinks.bookingDirectly} class="hidden md:block"
-        >Book Directly</CTA
-      >
+      {/* Desktop CTAs */}
+      <CTA href={externalLinks.bookingDirectly} class="hidden md:block">
+        Book Directly
+      </CTA>
       <CTA
         href={externalLinks.bookingDotCom}
         variant="booking"
-        class="hidden md:block">Booking.com</CTA
+        class="hidden md:block"
       >
+        Booking.com
+      </CTA>
 
+      {/* Burger button — mobile only */}
       <button
+        id="menu-open"
         class="block xl:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
         aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-sidebar"
       >
-        <span class="h-6 w-6">
-          <Icon name="burger-menu" size="1.5em" />
-        </span>
+        <Icon name="burger-menu" size="1.5em" />
+      </button>
+    </div>
+  </div>
+</div>
+
+{/* Overlay */}
+<div
+  id="menu-overlay"
+  class="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 opacity-0 pointer-events-none"
+  aria-hidden="true"
+>
+</div>
+
+{/* Sidebar menu */}
+<aside
+  id="mobile-sidebar"
+  class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out translate-x-full"
+  aria-label="Mobile navigation"
+>
+  <div class="flex flex-col h-full">
+    {/* Sidebar header */}
+    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+      <img src="/logo.jpg" alt="Tusker Lodge Logo" width={200} height={60} />
+      <button
+        id="menu-close"
+        class="p-2 rounded-md hover:bg-gray-100 transition-colors"
+        aria-label="Close menu"
+      >
+        <Icon name="close" size="1.5em" />
       </button>
     </div>
 
-    {/* Overlay */}
-    <div
-      class={clsx(
-        "fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300",
-        menu ? "opacity-100" : "opacity-0 pointer-events-none",
-      )}
-      role="button"
-    >
-    </div>
+    {/* Navigation */}
+    <nav class="flex-1 px-4 py-6">
+      <ol class="space-y-4">
+        {
+          navigations.map((n) => (
+            <li>
+              <a
+                href={n.url}
+                class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
+              >
+                {n.text}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
 
-    {/* Sidebar menu */}
-    <aside
-      class={clsx(
-        "fixed top-0 right-0 h-full bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out",
-        "w-80 max-w-[85vw]",
-        menu ? "translate-x-0" : "translate-x-full",
-      )}
-    >
-      <div class="flex flex-col h-full">
-        {/* Header */}
-        <div
-          class="flex items-center justify-between p-4 border-b border-gray-200"
-        >
-          <img
-            src="/logo.jpg"
-            alt="Tusker Lodge Logo"
-            width={200}
-            height={60}
-          />
-          <button
-            class="p-2 rounded-md hover:bg-gray-100 transition-colors"
-            aria-label="Close menu"
-          >
-            <span class="h-6 w-6">XICon</span>
-          </button>
-        </div>
-
-        {/* Navigation */}
-        <nav class="flex-1 px-4 py-6">
-          <ol class="space-y-4">
-            {
-              navigations.map((n) => (
-                <li>
-                  <a
-                    href={n.url}
-                    class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors text-lg font-medium"
-                  >
-                    {n.text}
-                  </a>
-                </li>
-              ))
-            }
-          </ol>
-        </nav>
-
-        {/* Footer with contact and booking */}
-        <div class="border-t border-gray-200 p-4 space-y-4">
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3 text-gray-700">
-              <div class="p-2 rounded-full bg-orange-500">
-                <span class="text-orange-100 h-4 w-4">Phone Call Icon</span>
-              </div>
-              <div>
-                <p class="text-gray-400 text-sm">Call Us</p>
-                <p class="font-semibold">
-                  <a href="tel:+441803292668">+44 1803 292668</a>
-                </p>
-              </div>
-            </div>
-
-            <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
-            <CTA href={externalLinks.bookingDotCom} variant="booking"
-              >Booking.com</CTA
-            >
+    {/* Sidebar footer — contact & booking */}
+    <div class="border-t border-gray-200 p-4 space-y-4">
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3 text-gray-700">
+          <div class="p-2 rounded-full bg-orange-500">
+            <Icon name="phone" class="text-white" size="1em" />
+          </div>
+          <div>
+            <p class="text-gray-400 text-sm">Call Us</p>
+            <p class="font-semibold">
+              <a href="tel:+441803292668">+44 1803 292668</a>
+            </p>
           </div>
         </div>
+
+        <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
+        <CTA href={externalLinks.bookingDotCom} variant="booking">
+          Booking.com
+        </CTA>
       </div>
-    </aside>
+    </div>
   </div>
-</div>
+</aside>
+
+<script>
+  const sidebar = document.getElementById("mobile-sidebar")!;
+  const overlay = document.getElementById("menu-overlay")!;
+  const openBtn = document.getElementById("menu-open")!;
+  const closeBtn = document.getElementById("menu-close")!;
+
+  function openMenu() {
+    sidebar.classList.remove("translate-x-full");
+    sidebar.classList.add("translate-x-0");
+    overlay.classList.remove("opacity-0", "pointer-events-none");
+    overlay.classList.add("opacity-100");
+    openBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    sidebar.classList.add("translate-x-full");
+    sidebar.classList.remove("translate-x-0");
+    overlay.classList.add("opacity-0", "pointer-events-none");
+    overlay.classList.remove("opacity-100");
+    openBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+</script>
