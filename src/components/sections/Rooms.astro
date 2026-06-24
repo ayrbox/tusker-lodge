@@ -14,7 +14,7 @@ const roomsInfo: RoomProps[] = [
     href: "./rooms/family",
   },
   {
-    name: "King & Queen Room",
+    name: "King Room",
     image: "images/rooms/king.jpg",
     href: "./rooms/king",
   },
@@ -31,8 +31,8 @@ const roomsInfo: RoomProps[] = [
 ];
 
 ---
-<section class="flex flex-col xl:flex-row-reverse">
-  <div class="xl:w-1/2 px-8 py-8 flex justify-center items-center">
+<section class="flex">
+  <div class="container mx-auto flex flex-col gap-6 items-center text-center">
     <div class="p-4 flex flex-col gap-8 text-center items-center">
       <h1 class="text-3xl text-gray-700 font-bold">Our Rooms</h1>
       <p class="text-gray-500">
@@ -43,37 +43,31 @@ const roomsInfo: RoomProps[] = [
       </p>
       <a class="flex group" href="./rooms">
         <span>Find more </span>
-
         <span class="transition-all group-hover:translate-x-4">
           <Icon name="arrow-right" size="1.5em" />
         </span>
       </a>
     </div>
-  </div>
-  <div class="xl:w-1/2 grid md:grid-cols-2 h-dvh xl:h-[32rem]">
-    {roomsInfo.map((r) => (
-      <div class="relative group text-white">
-        <div aria-hidden="true" class="absolute inset-0">
-          <img
-            class="object-cover h-full w-full"
-            src={r.image}
-            alt={r.name}
-          />
-        </div>
-        <div class="absolute inset-0 bg-linear-to-t from-[#1a627d] to-transparent"></div>
-        <div class="absolute inset-0 p-4 flex items-end">
-          <div>
-            <h3 class="text-xl font-bold">{r.name}</h3>
-            <a class="flex" href={r.href}>
+
+    <div class="grid gap-5 md:grid-cols-2">
+      {roomsInfo.map((r) => (
+        <div class="relative group border-2 rounded-xl overflow-hidden border-stone-200 ">
+            <img
+              class="object-cover"
+              src={r.image}
+              alt={r.name}
+            />
+
+            <a class="flex justify-center py-3" href={r.href}>
               <span class="absolute inset-0"></span>
-              <span>View</span>
+              <span class="text-xl font-bold">{r.name}</span>
               <span class="transition-all group-hover:translate-x-4">
                 <Icon name="arrow-right" size="1.5em" />
               </span>
             </a>
-          </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
+    
   </div>
 </section>
