@@ -55,16 +55,10 @@ const navigations: Nav[] = [
       </div>
 
       {/* Desktop CTAs */}
-      <CTA href={externalLinks.bookingDirectly} class="hidden md:block">
-        Book Directly
-      </CTA>
-      <CTA
-        href={externalLinks.bookingDotCom}
-        variant="booking"
-        class="hidden md:block"
-      >
-        Booking.com
-      </CTA>
+      <div class="hidden md:block">
+      <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
+      <CTA href={externalLinks.bookingDotCom} variant="booking">Booking.com</CTA>
+      </div>
 
       {/* Burger button — mobile only */}
       <button
