@@ -37,7 +37,7 @@ const navigations: Nav[] = [
       }
     </ol>
 
-    <div class="flex items-center content-center gap-x-2">
+    <div class="flex items-center content-center gap-x-3">
       {/* Desktop call us */}
       <div
         class="hidden relative xl:grid grid-cols-[auto_1fr] gap-x-2 items-center text-gray-700 mr-4"
@@ -54,7 +54,7 @@ const navigations: Nav[] = [
         </p>
       </div>
 
-      <div class="hidden md:block">
+      <div class="hidden md:flex md:gap-3">
         <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
         <CTA href={externalLinks.bookingDotCom} variant="booking">Booking.com</CTA>
       </div>
@@ -131,11 +131,12 @@ const navigations: Nav[] = [
             </p>
           </div>
         </div>
-
-        <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
-        <CTA href={externalLinks.bookingDotCom} variant="booking">
-          Booking.com
-        </CTA>
+        <div class="flex flex-col gap-3">
+          <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
+          <CTA href={externalLinks.bookingDotCom} variant="booking">
+            Booking.com
+          </CTA>
+        </div>
       </div>
     </div>
   </div>
