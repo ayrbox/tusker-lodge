@@ -1,15 +1,54 @@
 ---
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from '@/layouts/Layout.astro';
+import Wrapper, {
+  Sidebar,
+  Content as RoomContent,
+} from "@/components/rooms/Wrapper";
+import Facilities from "@/components/rooms/Facilities";
+import { actions } from "astro:actions";
+
+  const rooms = await getCollection("rooms");
+  const roomSorted = rooms.sort((a, b) => {
+    console.log(">>>>",a, a.data.order, b.data.order);
+    if (a.data.order && b.data.order) {
+      console.log(">>>>", a.data.order, b.data.order);
+      return a.data.order - b.data.order;
+    }
+    return 0;
+  });
+
+// export async function getStaticPaths() {
+//   const roomEntries = await getCollection("rooms");
+//   return roomEntries.map((entry) => ({
+//     params: { slug: entry.id },
+//     props: { entry },
+//   }));
+// }
+//
+// const { entry } = Astro.props;
+// const { Content } = await render(entry);
+
 ---
 
 <Layout title="Available Rooms | Tusker Lodge">
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-8 text-center">About Tusker Lodge</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">Our Rooms</h1>
     <div class="prose prose-slate max-w-none text-gray-700">
       <p>
-        Tusker Lodge is a pet-friendly bed and breakfast (B&B) located in the beautiful coastal town of Torquay, Devon.
-        Our Victorian property offers comfortable accommodation with modern amenities, perfect for couples, individuals, and families traveling with pets.
+        Our accommodation comprises of Single rooms and Double rooms.
+        The bedrooms are spread over our three story Guest House with
+        various south facing rooms having views over picturesque Torwood
+        gardens. To the front of the property is a large south east facing
+        terraced patio area also overlooking Torwood gardens.
       </p>
     </div>
   </div>
+  <ul>
+  {roomSorted.map((r: any) => <li>
+    <a class="text-blue-500 hover:text-blue-700" href={`/rooms/${r.id}`}>{r.id}</a>
+  </li>)}
+  </ul>
+  <pre>{JSON.stringify(roomSorted, null, 2)}</pre>
 </Layout>

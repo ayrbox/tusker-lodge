@@ -23,6 +23,7 @@ const rooms = defineCollection({
       count: z.number(),
       label: z.string(),
     }),
+    order: z.number().optional(),
   }),
 });
 

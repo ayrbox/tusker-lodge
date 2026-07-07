@@ -1,8 +1,8 @@
 ---
-title: "King Room with Garden View"
+title: "Budget Double Room"
 description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
 heroImage: "/images/rooms/king.jpg"
-order: 3
+order: 8
 images:
   - src: "/images/rooms/king.jpg"
     alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
@@ -40,6 +40,8 @@ rating:
   count: 89
   label: "Based on 89 reviews for comfortable beds"
 ---
+
+# Hello
 
 Experience luxury and comfort in our **King Room with Garden View**, a first-floor, south-facing bedroom featuring stunning views of the picturesque Torwood Gardens. This premium room is perfectly designed for guests seeking relaxation and sophistication at Tusker Lodge, a premier bed and breakfast in Torquay, Devon.
 
