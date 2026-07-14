@@ -1,35 +1,8 @@
 ---
+import { getCollection, render } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-export type RoomProps = {
-  image: { src: string };
-  name: string;
-  href: string;
-};
-
-const roomsInfo: RoomProps[] = [
-  {
-    name: "Triple Room",
-    image: "images/rooms/room-03-03.jpg",
-    href: "./rooms/family",
-  },
-  {
-    name: "King Room",
-    image: "images/rooms/king.jpg",
-    href: "./rooms/king",
-  },
-  {
-    name: "Doubles",
-    image: "images/rooms/doubles.jpg",
-    href: "./rooms/doubles",
-  },
-  {
-    name: "Singles",
-    image: "images/rooms/singles.jpg",
-    href: "./rooms/singles",
-  },
-];
-
+const rooms = await getCollection("rooms");
 ---
 <section class="flex">
   <div class="container mx-auto flex flex-col gap-6 items-center text-center">
@@ -48,19 +21,17 @@ const roomsInfo: RoomProps[] = [
         </span>
       </a>
     </div>
-
-    <div class="grid gap-5 md:grid-cols-2">
-      {roomsInfo.map((r) => (
+    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {rooms.map((r) => (
         <div class="relative group border-2 rounded-xl overflow-hidden border-stone-200 ">
             <img
               class="object-cover"
-              src={r.image}
-              alt={r.name}
+              src={r.data.images[0].src}
+              alt={r.data.images[0].alt}
             />
-
-            <a class="flex justify-center py-3" href={r.href}>
+            <a class="flex justify-center py-3" href={`/rooms/${r.id}`}>
               <span class="absolute inset-0"></span>
-              <span class="text-xl font-bold">{r.name}</span>
+              <span class="text-xl font-bold">{r.data.title}</span>
               <span class="transition-all group-hover:translate-x-4">
                 <Icon name="arrow-right" size="1.5em" />
               </span>
@@ -68,6 +39,5 @@ const roomsInfo: RoomProps[] = [
         </div>
       ))}
     </div>
-    
   </div>
 </section>
