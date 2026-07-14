@@ -9,33 +9,13 @@ import Wrapper, {
 import Facilities from "@/components/rooms/Facilities";
 import { actions } from "astro:actions";
 
-  const rooms = await getCollection("rooms");
-  const roomSorted = rooms.sort((a, b) => {
-    console.log(">>>>",a, a.data.order, b.data.order);
-    if (a.data.order && b.data.order) {
-      console.log(">>>>", a.data.order, b.data.order);
-      return a.data.order - b.data.order;
-    }
-    return 0;
-  });
-
-// export async function getStaticPaths() {
-//   const roomEntries = await getCollection("rooms");
-//   return roomEntries.map((entry) => ({
-//     params: { slug: entry.id },
-//     props: { entry },
-//   }));
-// }
-//
-// const { entry } = Astro.props;
-// const { Content } = await render(entry);
-
+const rooms = (await getCollection("rooms"))
+  .sort((a, b) => a.data.order && b.data.order && a.data.order - b.data.order) || 0;
 ---
-
-<Layout title="Available Rooms | Tusker Lodge">
+<Layout title="Rooms | Tusker Lodge">
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-8 text-center">Our Rooms</h1>
     <div class="prose prose-slate max-w-none text-gray-700">
+      <h1 class="text-center">Our Rooms</h1>
       <p>
         Our accommodation comprises of Single rooms and Double rooms.
         The bedrooms are spread over our three story Guest House with
@@ -45,10 +25,24 @@ import { actions } from "astro:actions";
       </p>
     </div>
   </div>
-  <ul>
-  {roomSorted.map((r: any) => <li>
-    <a class="text-blue-500 hover:text-blue-700" href={`/rooms/${r.id}`}>{r.id}</a>
-  </li>)}
-  </ul>
-  <pre>{JSON.stringify(roomSorted, null, 2)}</pre>
+
+  <div class="container mx-auto flex flex-col gap-6 items-center text-center">
+    <div class="flex flex-col gap-5">
+      {rooms.map((r) => (
+        <div class="relative group border-2 rounded-xl overflow-hidden border-stone-200 ">
+            <!-- image carousel -->
+            <img
+              class="object-cover"
+              src={r.data.images[0].src}
+              alt={r.data.images[0].alt}
+            />
+            <a class="flex justify-center py-3" href={`/rooms/${r.id}`}>
+              <span class="absolute inset-0"></span>
+              <span class="text-xl font-bold">{r.data.title}</span>
+            </a>
+        </div>
+      ))}
+    </div>
+  </div>
+  <pre>{JSON.stringify(rooms, null, 2)}</pre>
 </Layout>

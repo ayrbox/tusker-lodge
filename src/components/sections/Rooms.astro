@@ -2,7 +2,8 @@
 import { getCollection, render } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-const rooms = await getCollection("rooms");
+const rooms = (await getCollection("rooms"))
+  .sort((a, b) => a.data.order && b.data.order && a.data.order - b.data.order) || 0;
 ---
 <section class="flex">
   <div class="container mx-auto flex flex-col gap-6 items-center text-center">
