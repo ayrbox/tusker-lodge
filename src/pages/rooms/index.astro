@@ -1,7 +1,10 @@
 ---
 import { getCollection, render } from "astro:content";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+
 import Layout from '@/layouts/Layout.astro';
+import ZuttoSushi from "@/components/sections/ZuttoSushi.astro";
 import Wrapper, {
   Sidebar,
   Content as RoomContent,
@@ -26,23 +29,35 @@ const rooms = (await getCollection("rooms"))
     </div>
   </div>
 
-  <div class="container mx-auto flex flex-col gap-6 items-center text-center">
+  <div class="container mx-auto flex flex-col gap-6 items-center text-center my-12">
     <div class="flex flex-col gap-5">
-      {rooms.map((r) => (
-        <div class="relative group border-2 rounded-xl overflow-hidden border-stone-200 ">
+      {rooms.map((r, i) => (
+        <div class="grid grid-cols-12 gap-4 place-items-center">
+          <div class={`col-span-6 ${i % 2 !== 0 ? 'order-2 col-start-7' : 'col-start-1'}`}>
             <!-- image carousel -->
             <img
               class="object-cover"
               src={r.data.images[0].src}
               alt={r.data.images[0].alt}
             />
-            <a class="flex justify-center py-3" href={`/rooms/${r.id}`}>
-              <span class="absolute inset-0"></span>
-              <span class="text-xl font-bold">{r.data.title}</span>
-            </a>
+          </div>
+          <div class={`relative group col-span-4 ${i % 2 !== 0 ? 'order-1 col-start-2' : 'col-start-8'}`}>
+            <div class="overflow-hidden">
+              <h2 class="text-xl font-bold">{r.data.title}</h2>
+              <p class="text-left">{r.body.substr(0, 200)}</p>
+              <a class="flex py-3" href={`/rooms/${r.id}`}>
+                <span class="absolute inset-0"></span>
+                Book Now
+                <span class="transition-all group-hover:translate-x-4">
+                  <Icon name="arrow-right" size="1.5em" />
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       ))}
     </div>
   </div>
-  <pre>{JSON.stringify(rooms, null, 2)}</pre>
+
+  <ZuttoSushi />
 </Layout>
