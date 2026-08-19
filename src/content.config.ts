@@ -6,6 +6,7 @@ const rooms = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/rooms" }),
   schema: z.object({
     title: z.string(),
+    description: z.string(),
     images: z.array(z.object({ src: z.string(), alt: z.string() })),
     capacity: z.object({
       min: z.number(),

@@ -29,7 +29,7 @@ const rooms = (await getCollection("rooms"))
     </div>
   </div>
 
-  <div class="container mx-auto flex flex-col gap-6 items-center text-center my-12">
+  <div class="container mx-auto flex flex-col gap-6 items-center my-12">
     <div class="flex flex-col gap-5">
       {rooms.map((r, i) => (
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 place-items-center">
@@ -44,7 +44,7 @@ const rooms = (await getCollection("rooms"))
           <div class={`w-full relative group md:col-span-4 px-4 md:px-0 ${i % 2 !== 0 ? 'md:order-1 md:col-start-2' : 'md:col-start-8'}`}>
             <div class="overflow-hidden">
               <h2 class="text-xl font-bold">{r.data.title}</h2>
-              <p class="text-left">{r.body.substr(0, 200)}</p>
+              <p>{r.data.description}</p>
               <a class="flex py-3" href={`/rooms/${r.id}`}>
                 <span class="absolute inset-0"></span>
                 <span>more details</span>
@@ -58,6 +58,5 @@ const rooms = (await getCollection("rooms"))
       ))}
     </div>
   </div>
-
   <ZuttoSushi />
 </Layout>
