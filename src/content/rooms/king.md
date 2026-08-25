@@ -4,10 +4,12 @@ description: "Premium king room with 5-foot zip & link king-size bed, en-suite s
 heroImage: "/images/rooms/king.jpg"
 order: 3
 images:
-  - src: "/images/rooms/king.jpg"
+  - src: "/images/rooms/room-04-01.jpg"
     alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
-  - src: "/images/rooms/king.jpg"
-    alt: "King Room with En-Suite Shower - Premium Double Accommodation with Torwood Gardens View"
+  - src: "/images/rooms/room-04-02.jpg"
+    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+  - src: "/images/rooms/room-04-03.jpg"
+    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
 capacity:
   min: 1
   max: 2
