@@ -1,0 +1,34 @@
+---
+type CTAProps = {
+  href: string;
+  variant: "default" | "booking";
+};
+
+const { href, variant = "default" } = Astro.props as CTAProps;
+
+const cssClasses: Record<CTAProps["variant"], string[]> = {
+  default: ["bg-[#ffa400]", "hover:bg-[#009ffd]"],
+  booking: ["bg-[#003b95]", "hover:bg-[#006ce4]"],
+};
+---
+
+<a
+  href={href}
+  target="_blank"
+  class:list={[
+    "border",
+    "rounded-full",
+    "border border-transparent",
+    "px-8",
+    "py-3",
+    "text-base",
+    "font-medium",
+    "text-white",
+    "focus:ring-2",
+    "focus:ring-indigo-500",
+    "focus:ring-offset-2",
+    "focus:outline-hidden",
+    "shadow",
+    cssClasses[variant],
+  ]}><slot /></a
+>

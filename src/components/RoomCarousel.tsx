@@ -1,6 +1,5 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 interface RoomCarouselProps {
-  images: { src: StaticImageData; alt: string }[];
+  images: { src: { src: string }; alt: string }[];
 }
 
 export default function RoomCarousel({ images }: RoomCarouselProps) {
@@ -27,11 +26,10 @@ export default function RoomCarousel({ images }: RoomCarouselProps) {
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <div className="relative w-full">
-                <Image
-                  src={image.src}
+                <img
+                  src={image.src.src}
                   alt={image.alt}
                   className="w-full h-auto"
-                  priority={index === 0}
                 />
               </div>
             </CarouselItem>

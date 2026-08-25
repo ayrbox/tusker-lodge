@@ -1,0 +1,43 @@
+---
+import { BedDouble, PawPrint, CircleParking, Wifi, Tv } from "lucide-react";
+
+import { externalLinks } from "@/data/externalLinks";
+import CTA from "@/components/CTA.astro";
+
+
+export type AmenitiesProps= {
+  list: string[];
+};
+
+const { list } = Astro.props as AmenitiesProps;
+---
+
+<h2 class="text-3xl tracking-tight text-gray-900">Facilities</h2>
+<div class="my-6 text-blue-600">
+  <h3 class="sr-only">Ameneties</h3>
+  <div class="flex gap-2">
+    <BedDouble />
+    <PawPrint />
+    <Wifi />
+    <Tv />
+    <CircleParking />
+  </div>
+</div>
+
+<ul
+  role="list"
+  class="list-disc space-y-2 pl-4 text-sm text-gray-600"
+>
+  {list.map((text) => (
+    <li>{text}</li>
+  ))}
+</ul>
+
+<div class="py-4 flex flex-col gap-4">
+  <CTA href={externalLinks.bookingDirectly}>Book Directly</CTA>
+  <CTA href={externalLinks.bookingDotCom} variant="booking">Booking.com</CTA>
+</div>
+
+
+
+

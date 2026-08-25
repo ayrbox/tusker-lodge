@@ -1,0 +1,62 @@
+---
+import { getCollection, render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+import Layout from '@/layouts/Layout.astro';
+import ZuttoSushi from "@/components/sections/ZuttoSushi.astro";
+import Wrapper, {
+  Sidebar,
+  Content as RoomContent,
+} from "@/components/rooms/Wrapper";
+import Facilities from "@/components/rooms/Facilities";
+import { actions } from "astro:actions";
+
+const rooms = (await getCollection("rooms"))
+  .sort((a, b) => a.data.order && b.data.order && a.data.order - b.data.order) || 0;
+---
+<Layout title="Rooms | Tusker Lodge">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="prose prose-slate max-w-none text-gray-700">
+      <h1 class="text-center">Our Rooms</h1>
+      <p>
+        Our accommodation comprises of Single rooms and Double rooms.
+        The bedrooms are spread over our three story Guest House with
+        various south facing rooms having views over picturesque Torwood
+        gardens. To the front of the property is a large south east facing
+        terraced patio area also overlooking Torwood gardens.
+      </p>
+    </div>
+  </div>
+
+  <div class="container mx-auto flex flex-col gap-6 items-center my-12">
+    <div class="flex flex-col gap-5">
+      {rooms.map((r, i) => (
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 place-items-center">
+          <div class={`w-full md:col-span-6 ${i % 2 !== 0 ? 'md:order-2 md:col-start-7' : 'md:col-start-1'}`}>
+            <!-- image carousel -->
+            <img
+              class="object-cover w-full h-auto"
+              src={r.data.images[0].src}
+              alt={r.data.images[0].alt}
+            />
+          </div>
+          <div class={`w-full relative group md:col-span-4 px-4 md:px-0 ${i % 2 !== 0 ? 'md:order-1 md:col-start-2' : 'md:col-start-8'}`}>
+            <div class="overflow-hidden">
+              <h2 class="text-xl font-bold">{r.data.title}</h2>
+              <p>{r.data.description}</p>
+              <a class="flex py-3" href={`/rooms/${r.id}`}>
+                <span class="absolute inset-0"></span>
+                <span>more details</span>
+                <span class="transition-all group-hover:translate-x-4">
+                  <Icon name="arrow-right" size="1.5em" />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <ZuttoSushi />
+</Layout>
