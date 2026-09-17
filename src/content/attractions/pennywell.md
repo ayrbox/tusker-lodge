@@ -1,8 +1,8 @@
 ---
-name: "Kents Caverns"
+name: "Pennywell"
 category: "Local Attractions"
-description: "Prehistory Cave"
-link: "https://www.kents-cavern.co.uk/"
+description: "Farm & Wildlife Centre"
+link: "https://pennywellfarm.co.uk/"
 ---
 
 Explore the prehistoric caves of Kents Cavern, one of the most important Stone Age sites in Europe.
