@@ -1,21 +1,20 @@
 ---
 title: "Queen Room (7)"
 description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
-heroImage: "/images/rooms/king.jpg"
 order: 2
 images:
   - src: "/images/rooms/room-07-01.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
   - src: "/images/rooms/room-07-02.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
   - src: "/images/rooms/room-07-03.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
   - src: "/images/rooms/room-07-04.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
   - src: "/images/rooms/room-07-05.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
   - src: "/images/rooms/room-07-06.jpg"
-    alt: "King Room with Garden View - 5-Foot Zip & Link King-Size Bed at Tusker Lodge Torquay"
+    alt: "Queen Room at Tusker Lodge Torquay"
 
 capacity:
   min: 1

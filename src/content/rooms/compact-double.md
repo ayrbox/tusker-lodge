@@ -1,7 +1,6 @@
 ---
 title: "Compact Double Room (11)"
 description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
-heroImage: "/images/rooms/king.jpg"
 order: 5
 images:
   - src: "/images/rooms/room-11-01.webp"
