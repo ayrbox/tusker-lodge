@@ -76,16 +76,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Astro Build
         run: ${{ steps.detect-package-manager.outputs.runner }} astro build
-        env:
-          NEXT_PUBLIC_BOOKING_DIRECTLY: "https://booking-directly.com/widgets/DLdRvxNR4vFcZTkOiuz4Qo5FPd8WPmcwPjOPtcPJsAV1CDfo7uweeGDXgLdtm"
-          NEXT_PUBLIC_BOOKING_DOT_COM: "https://www.booking.com/hotel/gb/sceptrelodgehotel.en-gb.html?aid=304142#availability_target"
-      - name: Build Sitemap
-        run: ${{ steps.detect-package-manager.outputs.runner }} next-sitemap
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
   # Deployment job
   deploy:
