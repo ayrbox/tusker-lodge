@@ -15,6 +15,7 @@ beds:
   - type: "5-Foot Zip & Link King-Size Bed"
     quantity: 1
 amenities:
+  - External Bathroom
   - "Private En-Suite Shower Room"
   - "Free Toiletries"
   - "Hair Dryer"
