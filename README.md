@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tusker Lodge - Astro Website
+
+This project is a high-performance, content-focused website for Tusker Lodge, a pet-friendly B&B in Torquay, Devon. It has been migrated from Next.js to **Astro** for optimal performance and easier content management.
+
+## Project Structure
+
+- `src/content/`: Contains all markdown/MDX content (Rooms, Attractions, Policies).
+- `src/pages/`: File-based routing for the website.
+- `src/components/`: Reusable React components used as "Islands" where interactivity is needed.
+- `src/layouts/`: Main Astro layouts.
+- `src/styles/`: Global CSS and Tailwind configurations.
+- `public/`: Static assets (favicons, etc.).
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content Management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To add or edit content, modify the files in `src/content/`:
+- **Rooms:** `src/content/rooms/*.mdx`
+- **Attractions:** `src/content/attractions/*.md`
+- **Policies:** `src/content/policies/*.md`
 
-## Learn More
+All content is type-safe and validated against schemas defined in `src/content/config.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Islands Architecture:** Ship zero JavaScript by default. React is only used for interactive components like the Room Carousel and Cookie Banner.
+- **Content Collections:** Type-safe markdown content with Zod validation.
+- **MDX Support:** Embed React components directly in your markdown content.
+- **Tailwind CSS:** Modern utility-first styling.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The project can be deployed to any static hosting provider (Vercel, Netlify, Cloudflare Pages, etc.).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```

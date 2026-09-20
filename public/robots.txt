@@ -8,4 +8,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://tuskerlodge.co.uk/sitemap.xml
+Sitemap: https://tuskerlodge.co.uk/sitemap-index.xml
