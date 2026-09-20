@@ -1,6 +1,6 @@
 ---
 title: "King Room (4)"
-description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
+description: "Premium King Room featuring a 5-foot zip & link king-size bed, en-suite shower, and beautiful garden views at Tusker Lodge Torquay."
 order: 3
 images:
   - src: "/images/rooms/room-04-01.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Double Room (3)"
-description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
+description: "Comfortable Double Room featuring a double bed, en-suite shower, and all essential amenities for a relaxing stay at Tusker Lodge Torquay."
 order: 4
 images:
   - src: "/images/rooms/room-03-01.webp"
