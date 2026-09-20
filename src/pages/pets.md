@@ -4,7 +4,7 @@ title: "Pets"
 lastUpdated: "May 30, 2026"
 ---
 
-# We welcome well behaved dogs at Tusker Lodge.
+**All well behaved dogs are most welcomed in Tusker Lodge**
 
 One small/medium sized dog is allowed per room (size guide: max 20kgs).
 
