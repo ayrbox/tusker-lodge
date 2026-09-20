@@ -55,9 +55,8 @@ jobs:
           node-version: "26"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: astro
       - name: Restore cache
         uses: actions/cache@v6
         with:
