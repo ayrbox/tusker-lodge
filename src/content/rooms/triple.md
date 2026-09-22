@@ -1,6 +1,6 @@
 ---
 title: "Triple Room"
-description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
+description: "Spacious 102 ft² triple room for up to three guests, featuring one large double bed, one single bed, private en-suite shower, and beautiful garden views."
 order: 1
 images:
   - src: "/images/rooms/room-03-01.jpg"

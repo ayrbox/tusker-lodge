@@ -1,6 +1,6 @@
 ---
 title: "Large Single Room (2)"
-description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
+description: "Spacious Large Single Room featuring an en-suite shower, flat-screen TV, and all essential amenities at Tusker Lodge Torquay."
 order: 6
 images:
   - src: "/images/rooms/room-02-01.webp"
