@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Contact | Tusker Lodge">
@@ -12,7 +12,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
     
     <div class="space-y-8">
       <div class="flex gap-4">
-        <MapPin class="text-indigo-600" />
+        <Icon name="mappin" class="text-indigo-600" size="1.2em" />
         <address class="not-italic text-gray-700">
           Tusker Lodge<br />
           533 Babbacombe Road<br />
@@ -23,12 +23,12 @@ import { MapPin, Phone, Mail } from "lucide-react";
       </div>
 
       <div class="flex gap-4">
-        <Phone class="text-indigo-600" />
+        <Icon name="phone" class="text-indigo-600" size="1.2em" />
         <p class="text-gray-700">01803 292668</p>
       </div>
 
       <div class="flex gap-4">
-        <Mail class="text-indigo-600" />
+        <Icon name="mail" class="text-indigo-600" size="1.2em" />
         <p>
           <a href="mailto:info@tuskerlodge.co.uk" class="text-indigo-600 hover:underline">
             info@tuskerlodge.co.uk
