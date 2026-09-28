@@ -3,6 +3,7 @@ import { BedDouble, PawPrint, CircleParking, Wifi, Tv } from "lucide-react";
 
 import { externalLinks } from "@/data/externalLinks";
 import CTA from "@/components/CTA.astro";
+import { Icon } from "astro-icon/components";
 
 
 export type AmenitiesProps= {
@@ -16,11 +17,11 @@ const { list } = Astro.props as AmenitiesProps;
 <div class="my-6 text-blue-600">
   <h3 class="sr-only">Ameneties</h3>
   <div class="flex gap-2">
-    <BedDouble />
-    <PawPrint />
-    <Wifi />
-    <Tv />
-    <CircleParking />
+    <Icon name="bed" class="text-indigo-600" size="2em" />
+    <Icon name="paw" class="text-indigo-600" size="2em" />
+    <Icon name="wifi" class="text-indigo-600" size="2em" />
+    <Icon name="tv" class="text-indigo-600" size="2em" />
+    <Icon name="parking" class="text-indigo-600" size="2em" />
   </div>
 </div>
 
