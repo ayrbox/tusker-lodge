@@ -22,13 +22,61 @@ const { Content } = await render(entry);
     <!--image carasouel-->
     {
       entry.data.images.length > 0 && (
-        <Image
-          src={entry.data.images[0].src}
-          alt={entry.data.images[0].alt}
-          width={600}
-          height={400}
-          class="w-full h-auto rounded-lg"
-        />
+        <div class="relative w-full group" role="region" aria-roledescription="carousel" aria-label="Room Images">
+          <div
+            id="carousel"
+            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full rounded-lg [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {entry.data.images.map((img, index) => (
+              <div class="w-full flex-shrink-0 snap-center" role="group" aria-roledescription="slide" aria-label={`Slide ${index + 1} of ${entry.data.images.length}`}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={1200}
+                  height={800}
+                  class="w-full h-auto md:h-[600px] object-cover rounded-lg"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                />
+              </div>
+            ))}
+          </div>
+          {entry.data.images.length > 1 && (
+            <>
+              <button
+                id="prev"
+                class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Previous slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button
+                id="next"
+                class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Next slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+              <script>
+                const carousel = document.getElementById("carousel");
+                const prev = document.getElementById("prev");
+                const next = document.getElementById("next");
+                if (carousel && prev && next) {
+                  prev.addEventListener("click", () => {
+                    carousel.scrollBy({ left: -carousel.clientWidth, behavior: "smooth" });
+                  });
+                  next.addEventListener("click", () => {
+                    carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
+                  });
+                }
+              </script>
+            </>
+          )}
+        </div>
       )
     }
     <div class="w-full grid grid-cols-1 md:grid-cols-12 md:gap-4 px-4 pt-10 pb-16">

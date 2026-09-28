@@ -1,6 +1,6 @@
 ---
 title: "Budget Double Room (10)"
-description: "Premium king room with 5-foot zip & link king-size bed, en-suite shower, and garden views of Torwood Gardens at Tusker Lodge Torquay bed and breakfast."
+description: "Affordable Budget Double Room featuring a comfortable double bed, en-suite shower, and essential amenities at Tusker Lodge Torquay."
 order: 8
 images:
   - src: "/images/rooms/room-10-01.webp"
