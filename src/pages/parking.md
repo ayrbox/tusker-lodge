@@ -35,6 +35,20 @@ If our 3 private spaces are fully booked during your dates, public parking is av
   fees are the responsibility of the vehicle owner and are payable directly at the car
   park machines or via the local parking app.
 
+### Directions from Harbour Car Park to Tusker Lodge
+
+<div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+  <iframe
+    width="100%"
+    height="400"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://maps.google.com/maps?saddr=Torquay+Harbour+Car+Park&daddr=Tusker+Lodge,+533+Babbacombe+Rd,+Torquay&output=embed"
+  ></iframe>
+</div>
+
 ## Contact Us to Reserve Parking
 
 To check space availability or discuss accessibility requirements:
