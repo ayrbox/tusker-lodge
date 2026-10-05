@@ -1,31 +1,54 @@
 ---
 layout: "@/layouts/PageLayout.astro"
-title: "Pets"
+title: "Dog-Friendly Stays at Tusker Lodge"
 lastUpdated: "May 30, 2026"
 ---
 
-**All well behaved dogs are most welcomed in Tusker Lodge**
+## Welcoming Your Four-Legged Companions to Torquay
 
-One small/medium sized dog is allowed per room (size guide: max 20kgs).
+Finding truly dog-friendly accommodation can be difficult—genuine pet-welcoming
+B&Bs in Torquay are few and far between, and we are proud to be one of them.
+We believe your holiday is best enjoyed when the whole family, including your
+dog, can come along.
 
-Please be advised that we have two dogs and therefore guest’s dogs must
-be kept on a lead at all times in common areas of the Guest House. Dogs
-are not allowed on beds or other furniture, should not be left
-unattended in rooms under any circumstances.
+## Our Pet Policy & Guidelines
 
-We generally charge a one off fee per stay (fee dependant on the length
-of stay but starts at £10 for 1-5 nights) to cover cleaning costs, this
-may increase if the room requires more time. We also ask that you dispose
-of your pets waste (yes, you’d be surprised!) off the premises in dog
-litter bins which are across the road in the park.
+As an independent, family-run business, we strive to offer a clean, relaxed, and
+comfortable environment for every guest. To help us maintain our standards, please
+review our dog guidelines:
 
-We do not accept any pets other than dogs.
+- **Dog Size & Capacity**: Due to the scale of our lodge, we can comfortably welcome
+  one small-to-medium-sized dog per room (up to 20 kg). We exclusively welcome dogs;
+  other pets cannot be accommodated.
+- **On-Leash in Common Areas**: We have two friendly dogs of our own living on site.
+  For the safety and comfort of all pets and guests, visiting dogs must be kept on a
+  lead at all times while in hallways and shared areas.
+- **In the Room**: To ensure rooms remain pristine for subsequent guests, dogs are
+  not permitted on beds or furniture and must never be left unattended in the bedroom
+  at any time.
+- **Waste Disposal**: Torwood Gardens is located right across the road, featuring
+  designated public dog waste bins. Please ensure all dog waste is disposed of
+  off-premises in these bins.
 
-For a list of dog friendly beaches in the area please
-[click here](https://www.torbay.gov.uk/asb-environment-and-nuisance/dogs/dogs-on-the-beach/)
+## Pet Fee & Cleaning
 
-Most bars and pubs around the harbour are dog friendly, however the following
-site is quite useful... [www.doggiepubs.org.uk](http://www.doggiepubs.org.uk/)
+To ensure every room is thoroughly sanitised and deep-cleaned
+after each canine stay, a modest supplementary cleaning fee applies:
 
-For our four legged furry friends who have enjoyed your breakfast liver cake treat,
-here is the recipe (make sure they make you some) 😊
+- Stays from 1 to 5 nights: Starting from £10 (one-off charge per stay).
+- Longer stays or rooms requiring extra care may incur an adjusted fee.
+
+## Exploring Torquay with Your Dog
+
+Torquay and the English Riviera are wonderful destinations for dogs and their owners:
+
+- Parks & Walks: Torwood Gardens is directly opposite the lodge, perfect for fresh morning walks.
+- Dog-Friendly Beaches: Several nearby beaches along the coast welcome dogs year-round or seasonally.
+- Local Dining: Many pubs, cafés, and bars around Torquay Harbour are happy to welcome well-behaved dogs.
+
+**Planning to bring your dog?**
+**Please let us know in advance so we can prepare your room appropriately.**
+
+> Phone: +44 1803 292668  
+> Email: tuskerlodgehotel@gmail.com  
+> Address: 533 Babbacombe Road, Torquay, Devon, TQ1 1HQ
