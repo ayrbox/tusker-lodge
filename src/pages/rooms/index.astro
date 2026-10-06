@@ -29,6 +29,53 @@ const rooms = (await getCollection("rooms"))
     </div>
   </div>
 
+  <!-- NEW FEATURES SECTION -->
+  <div class="bg-slate-50 py-12 mb-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-2xl font-bold text-center mb-8">What to expect in our rooms</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="wifi" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Free WiFi</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="paw" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Pet Friendly</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="tv" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Freeview TV</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="shower" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Ensuite*</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="coffee" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Tea & Coffee</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="droplet" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Toiletries</span>
+        </div>
+      </div>
+      <p class="text-xs text-center text-slate-500 mt-6">* Ensuite shower and toilet available in most rooms. Complimentary water bottles included in all rooms.</p>
+    </div>
+  </div>
+  <!-- END NEW FEATURES SECTION -->
+
   <div class="container mx-auto flex flex-col gap-6 items-center my-12">
     <div class="flex flex-col gap-5">
       {rooms.map((r, i) => (
