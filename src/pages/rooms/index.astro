@@ -1,16 +1,10 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 import Layout from '@/layouts/Layout.astro';
 import ZuttoSushi from "@/components/sections/ZuttoSushi.astro";
-import Wrapper, {
-  Sidebar,
-  Content as RoomContent,
-} from "@/components/rooms/Wrapper";
-import Facilities from "@/components/rooms/Facilities";
-import { actions } from "astro:actions";
 
 const rooms = (await getCollection("rooms"))
   .sort((a, b) => a.data.order && b.data.order && a.data.order - b.data.order) || 0;
@@ -20,14 +14,67 @@ const rooms = (await getCollection("rooms"))
     <div class="prose prose-slate max-w-none text-gray-700">
       <h1 class="text-center">Our Rooms</h1>
       <p>
-        Our accommodation comprises of Single rooms and Double rooms.
-        The bedrooms are spread over our three story Guest House with
-        various south facing rooms having views over picturesque Torwood
-        gardens. To the front of the property is a large south east facing
-        terraced patio area also overlooking Torwood gardens.
+        Our accommodation comprises a selection of comfortably appointed Single and Double rooms
+        spread across our three-story Guest House. Many of our south-facing rooms offer picturesque
+        views over Torwood Gardens, while the front of the property features a large south-east
+        facing terraced patio for guests to enjoy.
+      </p>
+      <p>
+        To ensure a restful stay, all our rooms are
+        pet-friendly and come equipped with complimentary high-speed WiFi, Freeview TV, and a
+        thoughtful selection of amenities including tea and coffee-making facilities, complimentary
+        bottled water, and toiletries. Additionally, most of our rooms feature the convenience of an
+        en-suite shower and toilet.
       </p>
     </div>
   </div>
+
+  <!-- NEW FEATURES SECTION -->
+  <div class="bg-slate-50 py-12 mb-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-2xl font-bold text-center mb-8">What to expect in our rooms</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="wifi" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Free WiFi</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="paw" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Pet Friendly</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="tv" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Freeview TV</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="shower" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Ensuite*</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="coffee" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Tea & Coffee</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="p-3 bg-white rounded-full shadow-sm">
+            <Icon name="droplet" class="w-6 h-6 text-slate-700" />
+          </div>
+          <span class="text-sm font-medium">Toiletries</span>
+        </div>
+      </div>
+      <p class="text-xs text-center text-slate-500 mt-6">* Ensuite shower and toilet available in most rooms. Complimentary water bottles included in all rooms.</p>
+    </div>
+  </div>
+  <!-- END NEW FEATURES SECTION -->
 
   <div class="container mx-auto flex flex-col gap-6 items-center my-12">
     <div class="flex flex-col gap-5">
