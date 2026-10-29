@@ -22,9 +22,7 @@ const groupedAttractions = categories.map(category => ({
           <ul role="list" class="space-y-4">
             {category.attractions.map((attraction) => (
               <li class="group" key={attraction.data.name}>
-                <a
-                  href={attraction.data.link}
-                  target="_blank"
+                <a href={`/attractions/${attraction.id}`}
                   class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
                 >
                   {attraction.data.name}
