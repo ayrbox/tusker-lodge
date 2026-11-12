@@ -11,4 +11,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  redirects: {
+    "/index.php": {
+      status: 301,
+      destination: "/",
+    },
+  },
 });
