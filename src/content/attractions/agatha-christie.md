@@ -9,6 +9,9 @@ Torquay and the English Riviera hold an unmatched place in literary history as t
 
 For readers, writers, and curious travellers alike, the English Riviera is a living open-air museum where Christie's most famous stories—and legendary sleuths Hercule Poirot and Miss Jane Marple—spring to life.
 
+![Dame Agatha Christie](/images/agatha-christie.jpg)
+*Dame Agatha Christie in 1964 during her prolific best-selling era. (Source: Nationaal Archief, CC0 Public Domain)*
+
 ---
 
 ## Greenway: Agatha Christie’s Beloved Holiday Home
