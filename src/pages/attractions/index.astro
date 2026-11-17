@@ -2,39 +2,247 @@
 import { getCollection } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 
-const allAttractions = await getCollection('attractions');
+const allAttractions = (await getCollection('attractions')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
 
-// Group attractions by category
-const categories = [...new Set(allAttractions.map(a => a.data.category))];
-const groupedAttractions = categories.map(category => ({
-  name: category,
-  attractions: allAttractions.filter(a => a.data.category === category)
-}));
+const categories = ['All', ...new Set(allAttractions.map((a) => a.data.category))];
+const ITEMS_PER_PAGE = 9;
 ---
 
-<Layout title="Attractions | Tusker Lodge">
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">Local Attractions</h1>
-    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-      {groupedAttractions.map((category) => (
-        <div key={category.name}>
-          <h2 class="text-2xl mb-4 text-gray-600 pb-2">{category.name}</h2>
-          <ul role="list" class="space-y-4">
-            {category.attractions.map((attraction) => (
-              <li class="group" key={attraction.data.name}>
-                <a href={`/attractions/${attraction.id}`}
-                  class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
-                >
-                  {attraction.data.name}
-                </a>
-                {attraction.data.description && (
-                  <div class="text-sm text-gray-400 mt-1">{attraction.data.description}</div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+<Layout
+  title="Local Attractions & Things to Do | Tusker Lodge Torquay"
+  description="Explore the best local attractions, theatres, museums, and family days out near Tusker Lodge on Babbacombe Road in Torquay and the English Riviera."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <!-- Blog-style Header -->
+    <div class="max-w-3xl mx-auto text-center mb-10 md:mb-12">
+      <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-700 bg-sky-50 rounded-full mb-3">
+        English Riviera Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+        Local Attractions &amp; Things to Do
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+        Discover museums, historic landmarks, coastal walks, and live theatres all within easy reach of {" "}
+        <a href="/" class="text-sky-700 hover:text-sky-900 underline underline-offset-2">Tusker Lodge</a>
+        at 533 Babbacombe Road, Torquay.
+      </p>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div
+      id="category-filters"
+      class="flex flex-wrap items-center justify-center gap-2 mb-10"
+      role="tablist"
+      aria-label="Filter attractions by category"
+    >
+      {categories.map((category, index) => (
+        <button
+          type="button"
+          data-category={category}
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          class={`category-btn px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+            index === 0
+              ? 'bg-sky-700 text-white shadow-sm'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+          }`}
+        >
+          {category}
+        </button>
       ))}
     </div>
-  </div>
+
+    <!-- Blog Card Grid -->
+    <div
+      id="attractions-grid"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+    >
+      {allAttractions.map((attraction) => (
+        <article
+          class="attraction-card group flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          data-category={attraction.data.category}
+        >
+          <a
+            href={`/attractions/${attraction.id}`}
+            class="block relative aspect-[16/10] w-full overflow-hidden bg-slate-100"
+          >
+            <img
+              src="/images/attraction-placeholder.svg"
+              alt={`${attraction.data.name} placeholder`}
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+
+          <div class="flex flex-col flex-1 p-5 sm:p-6">
+            <div class="mb-3">
+              <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-sky-700 bg-sky-50 rounded-full">
+                {attraction.data.category}
+              </span>
+            </div>
+
+            <h2 class="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-2 group-hover:text-sky-700 transition-colors">
+              <a href={`/attractions/${attraction.id}`} class="hover:underline underline-offset-2">
+                {attraction.data.name}
+              </a>
+            </h2>
+
+            {attraction.data.description && (
+              <p class="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">
+                {attraction.data.description}
+              </p>
+            )}
+
+            <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm">
+              <a
+                href={`/attractions/${attraction.id}`}
+                class="inline-flex items-center font-semibold text-sky-700 hover:text-sky-900 transition-colors"
+              >
+                Read guide
+                <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination-wrapper" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200 pt-8 hidden">
+      <p id="pagination-summary" class="text-sm text-gray-600"></p>
+      <nav aria-label="Attractions pagination" class="flex items-center gap-1.5 flex-wrap justify-center">
+        <button
+          id="prev-page"
+          type="button"
+          class="px-3.5 py-2 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        >
+          Previous
+        </button>
+        <div id="page-numbers" class="flex items-center gap-1.5"></div>
+        <button
+          id="next-page"
+          type="button"
+          class="px-3.5 py-2 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        >
+          Next
+        </button>
+      </nav>
+    </div>
+  </section>
 </Layout>
+
+<script define:vars={{ ITEMS_PER_PAGE }}>
+  const cards = Array.from(document.querySelectorAll('.attraction-card'));
+  const filterBtns = Array.from(document.querySelectorAll('.category-btn'));
+  const paginationWrapper = document.getElementById('pagination-wrapper');
+  const paginationSummary = document.getElementById('pagination-summary');
+  const pageNumbersEl = document.getElementById('page-numbers');
+  const prevBtn = document.getElementById('prev-page');
+  const nextBtn = document.getElementById('next-page');
+  const grid = document.getElementById('attractions-grid');
+
+  let activeCategory = 'All';
+  let currentPage = 1;
+
+  function getFilteredCards() {
+    if (activeCategory === 'All') return cards;
+    return cards.filter((card) => card.dataset.category === activeCategory);
+  }
+
+  function render() {
+    const filtered = getFilteredCards();
+    const totalItems = filtered.length;
+    const totalPages = Math.max(1, Math.ceil(totalItems / ITEMS_PER_PAGE));
+
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIdx = startIdx + ITEMS_PER_PAGE;
+
+    cards.forEach((card) => {
+      card.classList.add('hidden');
+    });
+
+    filtered.slice(startIdx, endIdx).forEach((card) => {
+      card.classList.remove('hidden');
+    });
+
+    if (totalPages > 1) {
+      paginationWrapper?.classList.remove('hidden');
+      const shownEnd = Math.min(endIdx, totalItems);
+      if (paginationSummary) {
+        paginationSummary.textContent = `Showing ${startIdx + 1}–${shownEnd} of ${totalItems} guides`;
+      }
+
+      if (prevBtn) prevBtn.disabled = currentPage === 1;
+      if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+
+      if (pageNumbersEl) {
+        pageNumbersEl.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = String(i);
+          btn.setAttribute('aria-label', `Page ${i}`);
+          if (i === currentPage) {
+            btn.setAttribute('aria-current', 'page');
+            btn.className = 'w-9 h-9 text-sm font-semibold rounded-lg bg-sky-700 text-white shadow-sm cursor-pointer';
+          } else {
+            btn.className = 'w-9 h-9 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer';
+          }
+          btn.addEventListener('click', () => {
+            currentPage = i;
+            render();
+            grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          pageNumbersEl.appendChild(btn);
+        }
+      }
+    } else {
+      paginationWrapper?.classList.add('hidden');
+    }
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.category || 'All';
+      currentPage = 1;
+
+      filterBtns.forEach((b) => {
+        const isActive = b === btn;
+        b.setAttribute('aria-selected', String(isActive));
+        b.className = `category-btn px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
+          isActive
+            ? 'bg-sky-700 text-white shadow-sm'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        }`;
+      });
+
+      render();
+    });
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      render();
+      grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const totalPages = Math.ceil(getFilteredCards().length / ITEMS_PER_PAGE);
+    if (currentPage < totalPages) {
+      currentPage++;
+      render();
+      grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  render();
+</script>
