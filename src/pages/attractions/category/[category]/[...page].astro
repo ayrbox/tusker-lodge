@@ -1,0 +1,50 @@
+---
+import type { GetStaticPathsOptions } from 'astro';
+import Layout from '@/layouts/Layout.astro';
+import AttractionListView from '@/components/attractions/AttractionListView.astro';
+import {
+  ATTRACTIONS_PER_PAGE,
+  getCategoryLinks,
+  getSortedAttractions,
+  slugifyCategory,
+} from '@/utils/attractions';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allAttractions = await getSortedAttractions();
+  const categories = getCategoryLinks(allAttractions);
+  const uniqueCategoryNames = [...new Set(allAttractions.map((a) => a.data.category))];
+
+  return uniqueCategoryNames.flatMap((categoryName) => {
+    const categorySlug = slugifyCategory(categoryName);
+    const filtered = allAttractions.filter((a) => a.data.category === categoryName);
+
+    return paginate(filtered, {
+      params: { category: categorySlug },
+      pageSize: ATTRACTIONS_PER_PAGE,
+      props: {
+        categoryName,
+        categorySlug,
+        categories,
+      },
+    });
+  });
+}
+
+const { page, categoryName, categorySlug, categories } = Astro.props;
+const pageTitle =
+  page.currentPage === 1
+    ? `${categoryName} | Tusker Lodge Torquay`
+    : `${categoryName} (Page ${page.currentPage}) | Tusker Lodge Torquay`;
+---
+
+<Layout
+  title={pageTitle}
+  description={`Browse ${categoryName.toLowerCase()} guides and things to do near Tusker Lodge at 533 Babbacombe Road, Torquay.`}
+>
+  <AttractionListView
+    page={page}
+    categories={categories}
+    activeCategory={categoryName}
+    basePath={`/attractions/category/${categorySlug}`}
+  />
+</Layout>
