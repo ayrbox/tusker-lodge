@@ -1,0 +1,38 @@
+---
+import type { GetStaticPathsOptions } from 'astro';
+import Layout from '@/layouts/Layout.astro';
+import AttractionListView from '@/components/attractions/AttractionListView.astro';
+import {
+  ATTRACTIONS_PER_PAGE,
+  getCategoryLinks,
+  getSortedAttractions,
+} from '@/utils/attractions';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allAttractions = await getSortedAttractions();
+  const categories = getCategoryLinks(allAttractions);
+
+  return paginate(allAttractions, {
+    pageSize: ATTRACTIONS_PER_PAGE,
+    props: { categories },
+  });
+}
+
+const { page, categories } = Astro.props;
+const pageTitle =
+  page.currentPage === 1
+    ? 'Local Attractions & Things to Do | Tusker Lodge Torquay'
+    : `Local Attractions & Things to Do (Page ${page.currentPage}) | Tusker Lodge Torquay`;
+---
+
+<Layout
+  title={pageTitle}
+  description="Explore the best local attractions, theatres, museums, and family days out near Tusker Lodge at 533 Babbacombe Road in Torquay and the English Riviera."
+>
+  <AttractionListView
+    page={page}
+    categories={categories}
+    activeCategory="All"
+    basePath="/attractions"
+  />
+</Layout>
