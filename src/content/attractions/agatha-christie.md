@@ -63,9 +63,10 @@ There is a unique magic to South Devon's coastline. With its sub-tropical palm t
 
 ## Why Stay at Tusker Lodge for Your Christie Adventure?
 
-Located in central Torquay on peaceful St. Luke's Road, **[Tusker Lodge](/)** is the ideal base for literary fans and holidaymakers:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is the ideal base for literary fans and holidaymakers:
 
-- **Walking Distance to Key Sights:** Step out the front door and reach Torquay Harbour, Princess Gardens, and the starting point of the Agatha Christie Mile in just a few minutes' walk.
+- **Right Next Door to Torquay Museum:** Step out of our front door and walk straight next door to **[Torquay Museum](/attractions/torquay-muesum)** (529 Babbacombe Road), home to the UK's only permanent Agatha Christie Gallery.
+- **Walking Distance to Key Sights:** Reach Torquay Harbour, Beacon Cove, Princess Gardens, and the starting point of the Agatha Christie Mile in just a 5- to 10-minute stroll down Babbacombe Road.
 - **Easy Transport Links:** Torre and Torquay railway stations, local bus connections to Greenway, and coastal ferry points are all nearby, allowing you to explore Torbay without car-parking stress.
 - **Warm Victorian Comfort:** Return from a day of scenic coastal exploration to our welcoming Victorian guesthouse, featuring cosy, thoughtfully appointed [rooms](/rooms), spotless comfort, and personal local recommendations.
 - **Hearty Morning Breakfast:** Fuel your day of mystery trails and countryside walks with our freshly prepared, home-cooked breakfast before setting off on your next Devon adventure.

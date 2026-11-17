@@ -40,7 +40,7 @@ Torquay Museum offers great value for families and returning guests:
 
 ## Visiting from Tusker Lodge
 
-Located just off Babbacombe Road on St Lukes Road, **[Tusker Lodge](/)** is practically neighbours with Torquay Museum:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is literally next door to Torquay Museum (529 Babbacombe Road):
 
-- **On Foot (5–10 minutes):** Leave the car behind—it is an easy, pleasant walk of around half a mile from our front door straight to the museum entrance.
+- **On Foot (1 minute):** Step out of our front door and you are at the museum entrance in seconds—no car, bus, or parking needed.
 - **Make a Day of It:** Pair your museum visit with a stroll down to Torquay Harbour, follow the **[Agatha Christie Mile](/attractions/agatha-christie)** along the seafront, or head inland to explore **[Kents Cavern](/attractions/kents-cavern)** in person!

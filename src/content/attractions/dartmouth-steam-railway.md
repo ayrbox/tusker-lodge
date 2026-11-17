@@ -58,7 +58,7 @@ This seamless circular journey lets you experience the region by rail, river, an
 
 ## How to Visit from Tusker Lodge
 
-Located in Torquay on St Lukes Road, **[Tusker Lodge](/)** is ideally situated for catching the steam train from Paignton:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is ideally situated for catching the steam train from Paignton (approx. **3.5 miles** away):
 
 - **By Car (10–12 minutes):** Drive south via the Torquay seafront and A3022 straight into Paignton town centre. The main departure station is **Paignton (Queen's Park Station), Sat Nav: TQ4 6AF**. Plentiful multi-storey and pay-and-display parking is available adjacent to the station at Victoria Multi-Storey Car Park.
 - **By Train (7 minutes):** Catch the local mainline train from Torquay Station to Paignton Station; the steam railway platform is immediately adjacent to the mainline station.

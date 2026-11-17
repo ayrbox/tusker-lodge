@@ -27,7 +27,7 @@ During World War II it was temporarily renamed **The Garrison Theatre**, and it 
 
 ## Planning Your Visit from Tusker Lodge
 
-Located roughly **3 miles (10–15 minutes by car or bus)** from **[Tusker Lodge](/)** on St Lukes Road, Palace Theatre sits right next to Paignton's town centre and railway station:
+Located roughly **3.5 miles (12–15 minutes by car or bus)** from **[Tusker Lodge](/)** (**533 Babbacombe Road, Torquay, TQ1 1HQ**), Palace Theatre sits right next to Paignton's town centre and railway station:
 
 - **Combine with a Paignton Day Out:** Ride the **[Dartmouth Steam Railway](/attractions/dartmouth-steam-railway)**, visit **[Paignton Zoo](/attractions/paignton-zoo)**, or stroll along Paignton Pier and seafront before catching an afternoon or evening show.
 - **Official Listings & Tickets:** View the full programme and book tickets on the official website:  

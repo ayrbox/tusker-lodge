@@ -47,7 +47,7 @@ For current seasonal dates, ticket prices, and tide schedules, visit the officia
 
 ## Visiting from Tusker Lodge
 
-Located in Torquay on St Lukes Road, **[Tusker Lodge](/)** is a fantastic base for exploring the maritime charms of Brixham:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is a fantastic base for exploring the maritime charms of Brixham (approx. **8.5 miles** around Tor Bay):
 
 - **By Car (20–25 minutes):** Follow the coastal A379 / A3022 around Tor Bay directly into Brixham. Park at **Brixham Central Car Park** (short stay) or **Freshwater Quarry / Oxen Cove** for an easy stroll past the harbour.
 - **By Passenger Ferry (Seasonal):** Hop on the **Western Lady Ferry** from Torquay Harbour directly across the bay to Brixham Quayside—landing just steps from the Golden Hind!

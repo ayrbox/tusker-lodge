@@ -27,7 +27,7 @@ Just two years later, on **18 August 1963**, **The Beatles** played two unforget
 
 ## Planning Your Evening from Tusker Lodge
 
-Best of all for **[Tusker Lodge](/)** guests, Princess Theatre is just a **10-minute walk (approx. 0.5 miles)** down the hill from St Lukes Road:
+Best of all for **[Tusker Lodge](/)** guests, Princess Theatre is just a **10- to 12-minute walk (approx. 0.6 miles)** down Babbacombe Road from our front door at **533 Babbacombe Road, Torquay (TQ1 1HQ)**:
 
 - **Dine & Stroll by the Harbour:** Skip the parking altogether—enjoy dinner at one of Torquay Harbour's waterfront restaurants, take an evening walk past the **[English Riviera Wheel](/attractions/english-riviera-wheel)** and Princess Pier, and wander straight into your show.
 - **Official Listings & Tickets:** Check upcoming tour dates, seating availability, and book tickets on the official ATG Tickets page:  

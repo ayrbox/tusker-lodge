@@ -75,11 +75,11 @@ Tusker Lodge is a pet-friendly B&B, and guests traveling with their four-legged 
 
 ## Visiting Babbacombe Model Village from Tusker Lodge
 
-Located in central Torquay on St Lukes Road, **Tusker Lodge** is an ideal base for exploring Babbacombe. The model village is situated on Hampton Avenue in Babbacombe, just **2 miles** from our front door:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **Tusker Lodge** is an ideal base for exploring Babbacombe. The model village is situated on Hampton Avenue in Babbacombe, just **1.5 miles** straight up the road from our front door:
 
-- **By Car (6–8 minutes):** Head north via the A379 / Babbacombe Road directly toward St Marychurch/Babbacombe.
+- **By Car (5–7 minutes):** Head north via the A379 / Babbacombe Road directly toward St Marychurch/Babbacombe.
   - **Parking:** A dedicated council-operated pay-and-display car park (**Hampton Avenue Car Park, Sat Nav: TQ1 3LA**) is situated immediately adjacent to the village entrance. Payment can be made via card, cash, or the **RingGo** parking app. Additional council car parks are available nearby at Chilcote Close and Babbacombe Downs.
-- **By Bus (10–12 minutes):** Walk 4 minutes down to Torquay Strand / Harbour and catch the frequent **Stagecoach Bus Route 12 or Route 22**. Alight at St Marychurch or Babbacombe Downs, just a short, flat 3-minute stroll from the attraction entrance.
+- **By Bus (8–10 minutes):** Catch a frequent bus from Babbacombe Road (or walk 5 minutes down to Torquay Strand / Harbour for **Stagecoach Bus Route 12 or Route 22**). Alight at St Marychurch or Babbacombe Downs, just a short, flat 3-minute stroll from the attraction entrance.
 - **Combine with Other Nearby Attractions:** Make a full day of it! Babbacombe Model Village is only a 5-minute walk from the historic **[Babbacombe Cliff Railway](/attractions/babbacombe-cliff-railway)** leading down to Oddicombe Beach, and the entertaining **[Babbacombe Theatre](/attractions/babbacombe-theatre)** on the Downs.
 
 ---

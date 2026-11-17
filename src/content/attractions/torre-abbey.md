@@ -39,8 +39,8 @@ Torre Abbey’s story is inseparable from the growth of Torquay itself (read the
 
 ## Visiting from Tusker Lodge
 
-Located centrally on St Lukes Road, **[Tusker Lodge](/)** makes reaching Torre Abbey effortless:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** makes reaching Torre Abbey effortless:
 
-- **On Foot (15–20 minutes):** Enjoy a pleasant ~1-mile walk down through town toward the seafront and Abbey Sands.
+- **On Foot (20–25 minutes):** Enjoy a scenic ~1.3-mile walk down Babbacombe Road past Torquay Harbour and along the seafront promenade to Abbey Sands.
 - **By Car or Bus (5 minutes):** A quick drive down to The King's Drive (with pay-and-display parking nearby) or a short hop on local bus routes serving Torquay seafront.
 - **Make a Day of It:** Pair your visit with a stroll along the **[Agatha Christie Mile](/attractions/agatha-christie)**, a spin on the **[English Riviera Wheel](/attractions/english-riviera-wheel)**, or a trip to **[Torquay Museum](/attractions/torquay-muesum)**.

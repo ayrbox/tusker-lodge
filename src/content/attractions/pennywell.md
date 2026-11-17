@@ -59,7 +59,7 @@ To ensure a comfortable, uncrowded experience for all guests, **tickets must be 
 
 ## Visiting from Tusker Lodge
 
-Located in Torquay on St Lukes Road, **[Tusker Lodge](/)** is a convenient base for a day trip to Pennywell Farm:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is a convenient base for a day trip to Pennywell Farm:
 
 - **Distance:** Approximately **14 miles (23 km)** west of Torquay.
 - **Driving Time:** An easy **25- to 30-minute drive**.

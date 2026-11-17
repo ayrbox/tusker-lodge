@@ -72,7 +72,7 @@ Beyond the animal exhibits, Paignton Zoo offers a peaceful and deeply rewarding 
 
 ## Visiting from Tusker Lodge
 
-Located in Torquay on St Lukes Road, **[Tusker Lodge](/)** is less than 5 miles from the zoo gates:
+Located at **533 Babbacombe Road, Torquay (TQ1 1HQ)**, **[Tusker Lodge](/)** is around **5 miles** from the zoo gates:
 
 - **By Car (12–15 minutes):** Follow the Torquay seafront along the A3022 into Paignton, continuing onto Totnes Road (**Sat Nav: TQ4 7EU**).
 - **By Bus (20–25 minutes):** Catch the frequent **Stagecoach Route 12** from Torquay centre or harbour to Paignton Bus Station, followed by a quick connecting bus (Route 22 or Stagecoach Gold) directly to the zoo entrance.

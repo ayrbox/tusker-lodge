@@ -29,9 +29,9 @@ Standing nearly 150 feet high alongside the historic Princess Theatre and Torqua
 
 ## Visiting from Tusker Lodge
 
-The wheel couldn't be more convenient for guests staying at **[Tusker Lodge](/)**:
+The wheel couldn't be more convenient for guests staying at **[Tusker Lodge](/)** (533 Babbacombe Road, Torquay, TQ1 1HQ):
 - **Location:** Princess Gardens, Torquay Promenade, TQ2 5EZ.
-- **Distance:** Just a pleasant **5- to 7-minute stroll (approx. 0.4 miles)** down the hill from our front door on St Lukes Road.
+- **Distance:** Just a pleasant **8- to 10-minute stroll (approx. 0.5 miles)** down Babbacombe Road to Torquay Harbour and Princess Gardens.
 - Combine a flight on the wheel with an evening show at the Princess Theatre, a stroll along the Victorian pier, or dinner at one of the harbourside restaurants.
 
 For seasonal reopening dates, operational hours, and ticket information, visit the official website:  

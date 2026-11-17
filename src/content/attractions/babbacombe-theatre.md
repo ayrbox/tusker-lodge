@@ -27,7 +27,7 @@ Opening on **27 May 1939**, the venue served as an RAF lecture hall during World
 
 ## Planning Your Evening from Tusker Lodge
 
-Staying at **[Tusker Lodge](/)** on St Lukes Road puts you only **2 miles (5–10 minutes by car or local bus)** from Babbacombe Downs:
+Staying at **[Tusker Lodge](/)** (**533 Babbacombe Road, Torquay, TQ1 1HQ**) puts you only **1.4 miles (5 minutes by car or local bus straight up Babbacombe Road)** from Babbacombe Downs:
 
 - **Make an Afternoon & Evening of It:** Arrive early to stroll along the clifftop promenade, ride the historic **[Babbacombe Cliff Railway](/attractions/babbacombe-cliff-railway)** down to Oddicombe Beach, or visit **[Babbacombe Model Village](/attractions/babbacombe-model-village)** before dinner at one of the nearby Downs pubs or bistros.
 - **Official Listings & Tickets:** Show schedules change throughout the year—check upcoming performances and book seats directly on the official website:  

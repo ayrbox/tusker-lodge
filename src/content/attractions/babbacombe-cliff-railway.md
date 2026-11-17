@@ -101,10 +101,10 @@ Well-behaved dogs on leads are warmly welcomed aboard the railway at no extra ch
 
 ## Visiting from Tusker Lodge: Quick & Easy Travel
 
-Guests staying at **Tusker Lodge** (located centrally on St Lukes Road, Torquay) are perfectly positioned to enjoy a day out at Babbacombe Cliff Railway. Situated only 2.5 miles away, the journey takes just minutes:
+Guests staying at **Tusker Lodge** (located at **533 Babbacombe Road, Torquay, TQ1 1HQ**) are perfectly positioned to enjoy a day out at Babbacombe Cliff Railway. Situated only **1.5 miles** straight up Babbacombe Road, the journey takes just minutes:
 
-- **By Car (7–10 minutes):** Drive north along the A379 / Babbacombe Road directly toward Babbacombe Downs. Ample pay-and-display parking is available along Babbacombe Downs Road (TQ1 3LF), Princes Street car park, or the nearby Model Village car park.
-- **By Bus (12–15 minutes):** Prefer to leave the car behind? Take a gentle 4-minute walk from Tusker Lodge down to Torquay Harbour / Strand, then board the frequent **Stagecoach Bus Route 12 or Route 22**. Alight at Babbacombe Downs right outside the Cliff Railway entrance. Buses run every few minutes throughout the day.
+- **By Car (5–7 minutes):** Drive north along the A379 / Babbacombe Road directly toward Babbacombe Downs. Ample pay-and-display parking is available along Babbacombe Downs Road (TQ1 3LF), Princes Street car park, or the nearby Model Village car park.
+- **By Bus (8–10 minutes):** Prefer to leave the car behind? Catch a frequent local bus right along Babbacombe Road (or take a 5-minute walk down to Torquay Harbour / Strand for **Stagecoach Bus Route 12 or Route 22**) and alight at Babbacombe Downs right outside the Cliff Railway entrance.
 - **On Foot via the South West Coast Path (Scenic 45–60 minute hike):** Energetic walkers can join the South West Coast Path from Torquay harbour, skirting past Meadfoot Beach, the limestone cliffs of Hope's Nose, and picturesque Anstey's Cove before reaching Oddicombe and the Cliff Railway.
 
 After a refreshing day by the sea and a glide up the cliffs, return to the comfortable surroundings and warm hospitality of Tusker Lodge to unwind for the evening.

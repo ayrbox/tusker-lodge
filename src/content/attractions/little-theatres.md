@@ -27,7 +27,7 @@ After a major community fundraising drive (including a 17-week sell-out comedy r
 
 ## Planning Your Evening from Tusker Lodge
 
-TOADS Little Theatre is just over **1 mile (around 5 minutes by car or a pleasant 20-minute walk)** from **[Tusker Lodge](/)** on St Lukes Road:
+TOADS Little Theatre is just **0.4 miles (an 8- to 10-minute walk or 2- to 3-minute drive)** from **[Tusker Lodge](/)** at **533 Babbacombe Road, Torquay (TQ1 1HQ)**:
 
 - **A Relaxed Local Night Out:** Pair an evening play with a pre-theatre stroll down to nearby Meadfoot Beach or Torquay Harbour for dinner.
 - **Official Listings & Tickets:** Check the current season, performance dates, and box office availability on the official website:  
