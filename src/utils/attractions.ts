@@ -30,13 +30,13 @@ export function getCategoryLinks(
     ...new Set(attractions.map((a) => a.data.category)),
   ];
   return [
-    { name: "All", slug: "all", href: "/attractions" },
+    { name: "All", slug: "all", href: "/attractions/" },
     ...uniqueCategories.map((name) => {
       const slug = slugifyCategory(name);
       return {
         name,
         slug,
-        href: `/attractions/category/${slug}`,
+        href: `/attractions/category/${slug}/`,
       };
     }),
   ];

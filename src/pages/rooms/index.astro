@@ -122,7 +122,7 @@ const rooms = (await getCollection("rooms"))
             <div class="overflow-hidden">
               <h2 class="text-xl font-bold">{r.data.title}</h2>
               <p>{r.data.description}</p>
-              <a class="flex py-3" href={`/rooms/${r.id}`}>
+              <a class="flex py-3" href={`/rooms/${r.id}/`}>
                 <span class="absolute inset-0"></span>
                 <span>more details</span>
                 <span class="transition-all group-hover:translate-x-4">
