@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://tuskerlodge.co.uk",
+  trailingSlash: "always",
   integrations: [mdx(), icon(), sitemap()],
   vite: {
     plugins: [tailwindcss()],

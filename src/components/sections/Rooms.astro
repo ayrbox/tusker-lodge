@@ -15,7 +15,7 @@ const rooms = (await getCollection("rooms"))
         reasonable prices. Simple, comfortable, and everything you need for
         a relaxing stay.
       </p>
-      <a class="flex group" href="./rooms">
+      <a class="flex group" href="./rooms/">
         <span>Find more </span>
         <span class="transition-all group-hover:translate-x-4">
           <Icon name="arrow-right" size="1.5em" />
@@ -30,7 +30,7 @@ const rooms = (await getCollection("rooms"))
               src={r.data.images[0].src}
               alt={r.data.images[0].alt}
             />
-            <a class="flex justify-center py-3" href={`/rooms/${r.id}`}>
+            <a class="flex justify-center py-3" href={`/rooms/${r.id}/`}>
               <span class="absolute inset-0"></span>
               <span class="text-xl font-bold">{r.data.title}</span>
               <span class="transition-all group-hover:translate-x-4">
