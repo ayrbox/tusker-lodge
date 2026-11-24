@@ -23,11 +23,18 @@ const { Content } = await render(entry);
   <div class="container mx-auto flex flex-col items-center">
     <a href="/attractions/">Back</a>
     <div class="w-full grid grid-cols-1 md:grid-cols-12 md:gap-4 px-4 pt-10 pb-16">
-      <div class="md:col-span-12">
+      <div class="md:col-span-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">{entry.data.name}</h1>
         <p><small>{entry.data.description}</small></p>
       </div>
-      <div class="md:col-start-1 md:col-span-9 ">
+
+      <div class="md:col-span-12">
+        <div class=`h-96 bg-contain bg-center bg-no-repeat`
+          style={{ backgroundImage: `url(${entry.data.image})` }}
+        ></div>
+      </div>
+
+      <div class="md:col-start-3 md:col-span-9">
         <div class="prose prose-slate max-w-[100ch] ">
           <Content />
         </div>
