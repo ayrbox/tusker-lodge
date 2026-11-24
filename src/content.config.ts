@@ -35,6 +35,7 @@ const attractions = defineCollection({
     category: z.string(),
     description: z.string().optional(),
     link: z.string(),
+    image: z.string().optional().default("/images/attraction-placeholder.svg"),
   }),
 });
 

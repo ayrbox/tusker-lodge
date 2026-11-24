@@ -72,14 +72,13 @@ const pageNumbers = Array.from({ length: page.lastPage }, (_, i) => {
             class="block relative aspect-[16/10] w-full overflow-hidden bg-slate-100"
           >
             <img
-              src="/images/attraction-placeholder.svg"
+              src={`${attraction.data.image}`}
               alt={`${attraction.data.name} placeholder`}
               loading="lazy"
               decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </a>
-
           <div class="flex flex-col flex-1 p-5 sm:p-6">
             <div class="mb-3">
               <a href={`/attractions/category/${categorySlug}/`}
