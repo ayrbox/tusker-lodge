@@ -14,9 +14,10 @@ const { page, categories, activeCategory, basePath } = Astro.props;
 
 const pageNumbers = Array.from({ length: page.lastPage }, (_, i) => {
   const num = i + 1;
+  const href= num === 1 ? basePath : `${basePath.replace(/\/+$/,"")}/${num}/`;
   return {
     num,
-    href: num === 1 ? basePath : `${basePath}/${num}/`,
+    href,
     isCurrent: num === page.currentPage,
   };
 });
