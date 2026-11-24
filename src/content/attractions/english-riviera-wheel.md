@@ -3,6 +3,7 @@ name: "The English Riviera Wheel: Torquay Harbour Panoramic Views"
 category: "Local Attractions"
 description: "Soar above Torquay on the English Riviera Wheel in Princess Gardens: breathtaking 360-degree panoramic views of Tor Bay, just a 5-minute walk from Tusker Lodge."
 link: "https://englishrivierawheel.co.uk/"
+image: "/images/english-rivera-wheel.jpg"
 ---
 
 Towering gracefully above Torquay’s palm-lined seafront in **Princess Gardens**, the **[English Riviera Wheel](https://englishrivierawheel.co.uk/)** is one of Torbay’s most striking seasonal landmarks.
@@ -30,6 +31,7 @@ Standing nearly 150 feet high alongside the historic Princess Theatre and Torqua
 ## Visiting from Tusker Lodge
 
 The wheel couldn't be more convenient for guests staying at **[Tusker Lodge](/)** (533 Babbacombe Road, Torquay, TQ1 1HQ):
+
 - **Location:** Princess Gardens, Torquay Promenade, TQ2 5EZ.
 - **Distance:** Just a pleasant **8- to 10-minute stroll (approx. 0.5 miles)** down Babbacombe Road to Torquay Harbour and Princess Gardens.
 - Combine a flight on the wheel with an evening show at the Princess Theatre, a stroll along the Victorian pier, or dinner at one of the harbourside restaurants.
